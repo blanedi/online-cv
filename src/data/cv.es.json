@@ -1,0 +1,93 @@
+{
+  "name": "Cintya Huaire",
+  "title": "Especialista en Políticas | Protección Social | Género | Investigación",
+  "contact": {
+    "email": "edithuaire@gmail.com",
+    "phone": "+49 157 51369758",
+    "location": "Berlín, Alemania",
+    "linkedin": "https://www.linkedin.com/in/cintyahuaire/",
+    "github": "https://github.com/blanedi"
+  },
+  "summary": "Especialista en políticas con experiencia en protección social, género e investigación. Trayectoria comprobada en organizaciones internacionales y agencias gubernamentales, con experiencia en gestión de proyectos, análisis de políticas y colaboración intercultural.",
+  "experience": [
+    {
+      "role": "Consultora, Centro Internacional para el Desarrollo de Políticas Migratorias (ICMPD)",
+      "period": "2024 – Presente",
+      "location": "Viena, Austria (Remoto)",
+      "description": "Apoyo al desarrollo de políticas migratorias y proyectos de investigación en Europa y América Latina."
+    },
+    {
+      "role": "Consultora, Organización Internacional del Trabajo (OIT)",
+      "period": "2023 – 2024",
+      "location": "Ginebra, Suiza (Remoto)",
+      "description": "Contribución a iniciativas de protección social e igualdad de género, incluyendo investigación y recomendaciones de políticas."
+    },
+    {
+      "role": "Consultora, UNICEF América Latina y el Caribe",
+      "period": "2022 – 2023",
+      "location": "Ciudad de Panamá, Panamá (Remoto)",
+      "description": "Liderazgo en investigación sobre sistemas de cuidado y política social en América Latina y el Caribe."
+    },
+    {
+      "role": "Asesora, Ministerio de Vivienda, Construcción y Saneamiento, Perú",
+      "period": "2021 – 2022",
+      "location": "Lima, Perú",
+      "description": "Asesoría en políticas públicas e implementación de programas de vivienda y saneamiento."
+    },
+    {
+      "role": "Asesora, Ministerio de Economía y Finanzas, Perú",
+      "period": "2020 – 2021",
+      "location": "Lima, Perú",
+      "description": "Apoyo en análisis de políticas económicas y gestión de proyectos."
+    },
+    {
+      "role": "Asesora, Ministerio de Educación, Perú",
+      "period": "2019 – 2020",
+      "location": "Lima, Perú",
+      "description": "Trabajo en políticas educativas y evaluación de programas."
+    },
+    {
+      "role": "Consultora, Metis Gaia S.AC",
+      "period": "2018 – 2019",
+      "location": "Lima, Perú",
+      "description": "Consultoría en proyectos ambientales y sociales."
+    }
+  ],
+  "other_experience": [
+    {
+      "role": "Consultora, 180 Degrees Consulting",
+      "period": "2017 – 2018",
+      "location": "Lima, Perú",
+      "description": "Consultoría para organizaciones sin fines de lucro y empresas sociales."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Maestría en Políticas Públicas",
+      "institution": "Hertie School, Berlín, Alemania",
+      "period": "2022 – 2024"
+    },
+    {
+      "degree": "Licenciatura en Economía",
+      "institution": "Pontificia Universidad Católica del Perú",
+      "period": "2014 – 2018"
+    }
+  ],
+  "languages": [
+    { "name": "Inglés", "level": "Nativo/Fluido" },
+    { "name": "Español", "level": "Nativo/Fluido" },
+    { "name": "Francés", "level": "Competencia profesional" }
+  ],
+  "publications": [
+    {
+      "title": "Impacto de la participación de las mujeres en la política en el desarrollo e implementación de políticas de cuidado progresistas en América Latina y el Caribe",
+      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean?channel=doi&linkId=6489bb53712bd82962230b14&showFulltext=true"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Beca, Hertie School",
+      "year": "2022 – 2024"
+    }
+  ]
+}

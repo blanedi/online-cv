@@ -1,0 +1,93 @@
+{
+  "name": "Cintya Huaire",
+  "title": "Spécialiste des politiques | Protection sociale | Genre | Recherche",
+  "contact": {
+    "email": "edithuaire@gmail.com",
+    "phone": "+49 157 51369758",
+    "location": "Berlin, Allemagne",
+    "linkedin": "https://www.linkedin.com/in/cintyahuaire/",
+    "github": "https://github.com/blanedi"
+  },
+  "summary": "Spécialiste des politiques avec expérience en protection sociale, genre et recherche. Expérience avérée dans des organisations internationales et des agences gouvernementales, avec expertise en gestion de projets, analyse de politiques et collaboration interculturelle.",
+  "experience": [
+    {
+      "role": "Consultante, Centre international pour le développement des politiques migratoires (ICMPD)",
+      "period": "2024 – Présent",
+      "location": "Vienne, Autriche (Télétravail)",
+      "description": "Soutien au développement des politiques migratoires et projets de recherche en Europe et Amérique latine."
+    },
+    {
+      "role": "Consultante, Organisation internationale du travail (OIT)",
+      "period": "2023 – 2024",
+      "location": "Genève, Suisse (Télétravail)",
+      "description": "Contribution aux initiatives de protection sociale et d’égalité de genre, y compris la recherche et les recommandations politiques."
+    },
+    {
+      "role": "Consultante, UNICEF Amérique latine et Caraïbes",
+      "period": "2022 – 2023",
+      "location": "Panama, Panama (Télétravail)",
+      "description": "Direction de la recherche sur les systèmes de soins et la politique sociale en Amérique latine et dans les Caraïbes."
+    },
+    {
+      "role": "Conseillère, Ministère du logement, de la construction et de l’assainissement, Pérou",
+      "period": "2021 – 2022",
+      "location": "Lima, Pérou",
+      "description": "Conseil en politiques publiques et mise en œuvre de programmes de logement et d’assainissement."
+    },
+    {
+      "role": "Conseillère, Ministère de l’économie et des finances, Pérou",
+      "period": "2020 – 2021",
+      "location": "Lima, Pérou",
+      "description": "Soutien à l’analyse des politiques économiques et à la gestion de projets."
+    },
+    {
+      "role": "Conseillère, Ministère de l’éducation, Pérou",
+      "period": "2019 – 2020",
+      "location": "Lima, Pérou",
+      "description": "Travail sur la politique éducative et l’évaluation des programmes."
+    },
+    {
+      "role": "Consultante, Metis Gaia S.AC",
+      "period": "2018 – 2019",
+      "location": "Lima, Pérou",
+      "description": "Consultante sur des projets environnementaux et sociaux."
+    }
+  ],
+  "other_experience": [
+    {
+      "role": "Consultante, 180 Degrees Consulting",
+      "period": "2017 – 2018",
+      "location": "Lima, Pérou",
+      "description": "Conseil pour des organisations à but non lucratif et des entreprises sociales."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master en politiques publiques",
+      "institution": "Hertie School, Berlin, Allemagne",
+      "period": "2022 – 2024"
+    },
+    {
+      "degree": "Licence en économie",
+      "institution": "Université catholique pontificale du Pérou",
+      "period": "2014 – 2018"
+    }
+  ],
+  "languages": [
+    { "name": "Anglais", "level": "Courant" },
+    { "name": "Espagnol", "level": "Courant" },
+    { "name": "Français", "level": "Compétence professionnelle" }
+  ],
+  "publications": [
+    {
+      "title": "Impact de la participation des femmes en politique sur le développement et la mise en œuvre de politiques de soins progressistes en Amérique latine et dans les Caraïbes",
+      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean?channel=doi&linkId=6489bb53712bd82962230b14&showFulltext=true"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Bourse, Hertie School",
+      "year": "2022 – 2024"
+    }
+  ]
+}
