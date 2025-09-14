@@ -1,93 +1,180 @@
 {
   "name": "Cintya Huaire",
-  "title": "Spécialiste des politiques | Protection sociale | Genre | Recherche",
+  "title": "Analyste en Données et Politiques | Innovation numérique pour la migration et la protection sociale",
   "contact": {
     "email": "edithuaire@gmail.com",
-    "phone": "+49 157 51369758",
-    "location": "Berlin, Allemagne",
+    "phone": "+356 79655302",
+    "location": "La Valette, Malte",
     "linkedin": "https://www.linkedin.com/in/cintyahuaire/",
     "github": "https://github.com/blanedi"
   },
-  "summary": "Spécialiste des politiques avec expérience en protection sociale, genre et recherche. Expérience avérée dans des organisations internationales et des agences gouvernementales, avec expertise en gestion de projets, analyse de politiques et collaboration interculturelle.",
+  "summary": "Animée par un engagement profond en faveur du développement inclusif, je combine expertise en économie, politiques publiques et analyse de données pour concevoir des solutions évolutives. Forte de plus de 6 ans d’expérience au sein de l’UNICEF, de l’OIT, de l’ICMPD et de l’administration publique péruvienne, je relie l’analyse complexe des données à la mise en œuvre de politiques concrètes dans les domaines de la protection sociale, de la migration, du genre et de la transformation numérique.",
   "experience": [
     {
-      "role": "Consultante, Centre international pour le développement des politiques migratoires (ICMPD)",
+      "role": "Chargée de projet junior, Modernisation et innovation numérique",
+      "organization": "ICMPD",
       "period": "2024 – Présent",
-      "location": "Vienne, Autriche (Télétravail)",
-      "description": "Soutien au développement des politiques migratoires et projets de recherche en Europe et Amérique latine."
+      "location": "La Valette, Malte",
+      "description": [
+        "Développement de tableaux de bord modulaires sous Power BI afin d’optimiser les flux de données et d’améliorer la prise de décision dans les projets migratoires méditerranéens.",
+        "Réalisation d’analyses coûts-bénéfices d’outils d’IA (ex. solutions CAT), pour orienter l’allocation des ressources et l’intégration technologique.",
+        "Mise en place de rapports automatisés par IA pour des événements de haut niveau, réduisant les délais de production de plusieurs jours à quelques minutes.",
+        "Cartographie de solutions numériques alignées sur les principes de l’Infrastructure publique numérique (DPI), contribuant à instaurer une culture de l’innovation."
+      ]
     },
     {
-      "role": "Consultante, Organisation internationale du travail (OIT)",
+      "role": "Consultante en recherche, FUNDAMENTALS",
+      "organization": "Organisation internationale du Travail (OIT)",
       "period": "2023 – 2024",
       "location": "Genève, Suisse (Télétravail)",
-      "description": "Contribution aux initiatives de protection sociale et d’égalité de genre, y compris la recherche et les recommandations politiques."
+      "description": [
+        "Organisation et analyse de données sur le travail des enfants et le travail forcé à partir d’enquêtes auprès des ménages, de l’OIT et d’autres sources pour soutenir la recherche mondiale.",
+        "Contribution aux avancées méthodologiques dans la mesure du travail forcé et de la traite des êtres humains.",
+        "Développement de modèles statistiques et d’outils de visualisation de données avec R et Stata.",
+        "Appui aux ateliers et missions de terrain, favorisant l’échange de connaissances entre régions."
+      ]
     },
     {
-      "role": "Consultante, UNICEF Amérique latine et Caraïbes",
+      "role": "Stagiaire en politique sociale",
+      "organization": "UNICEF Amérique latine et Caraïbes",
       "period": "2022 – 2023",
       "location": "Panama, Panama (Télétravail)",
-      "description": "Direction de la recherche sur les systèmes de soins et la politique sociale en Amérique latine et dans les Caraïbes."
+      "description": [
+        "Conception et gestion de bulletins, webinaires et notes de recherche pour renforcer les réseaux régionaux de politique sociale.",
+        "Rédaction de sections du rapport phare de l’UNICEF sur les systèmes de soins et d’accompagnement en Amérique latine et dans les Caraïbes.",
+        "Renforcement de la gestion des connaissances à travers MailChimp, SharePoint et les réseaux sociaux."
+      ]
     },
     {
-      "role": "Conseillère, Ministère du logement, de la construction et de l’assainissement, Pérou",
-      "period": "2021 – 2022",
+      "role": "Consultante en politiques publiques",
+      "organization": "Ministère du Logement, de la Construction et de l’Assainissement, Pérou",
+      "period": "2021",
       "location": "Lima, Pérou",
-      "description": "Conseil en politiques publiques et mise en œuvre de programmes de logement et d’assainissement."
+      "description": [
+        "Mise en place d’une base nationale d’indicateurs pour 94 922 centres peuplés en utilisant R et Stata.",
+        "Contribution au nouveau cadre de classification rural–urbain et co-rédaction de publications de référence.",
+        "Production d’analyses SIG et de tableaux de bord utilisés par les planificateurs nationaux pour la priorisation et la planification de scénarios."
+      ]
     },
     {
-      "role": "Conseillère, Ministère de l’économie et des finances, Pérou",
+      "role": "Consultante économique",
+      "organization": "Ministère de l’Économie et des Finances, Pérou",
       "period": "2020 – 2021",
       "location": "Lima, Pérou",
-      "description": "Soutien à l’analyse des politiques économiques et à la gestion de projets."
+      "description": [
+        "Conception de nouveaux indicateurs de performance pour le suivi des projets d’infrastructure pendant la crise du COVID-19.",
+        "Systématisation de bases de données administratives afin de soutenir la réforme du système de trésorerie en collaboration avec le FMI.",
+        "Création de tableaux de bord pour le suivi de projets sectoriels évalués à 2,56 millions USD et rédaction de décrets légaux."
+      ]
     },
     {
-      "role": "Conseillère, Ministère de l’éducation, Pérou",
-      "period": "2019 – 2020",
+      "role": "Consultante économique",
+      "organization": "Ministère de l’Éducation, Pérou",
+      "period": "2018 – 2020",
       "location": "Lima, Pérou",
-      "description": "Travail sur la politique éducative et l’évaluation des programmes."
+      "description": [
+        "Amélioration du Programme national de maintenance scolaire (« Mi Mantenimiento ») pour aider 51 000 directeurs d’école à suivre l’utilisation des fonds d’infrastructure.",
+        "Augmentation du taux de conformité de 15 % et obtention du Prix 2019 des Bonnes pratiques en gestion publique.",
+        "Élaboration de stratégies d’allocation et de méthodologies multicritères pour la distribution de 101 millions USD de financement scolaire.",
+        "Réduction de 50 % des délais d’intervention grâce à l’amélioration de la qualité des données et des processus de gestion des risques."
+      ]
     },
     {
-      "role": "Consultante, Metis Gaia S.AC",
-      "period": "2018 – 2019",
+      "role": "Analyste junior",
+      "organization": "Metis Gaia S.AC",
+      "period": "2017 – 2018",
       "location": "Lima, Pérou",
-      "description": "Consultante sur des projets environnementaux et sociaux."
+      "description": [
+        "Réalisation d’analyses qualitatives sur des projets environnementaux et sociaux.",
+        "Planification et supervision du travail de terrain, y compris la conception de questionnaires et le nettoyage des données.",
+        "Soutien à des projets miniers par des analyses statistiques et économiques."
+      ]
     }
   ],
   "other_experience": [
     {
-      "role": "Consultante, 180 Degrees Consulting",
-      "period": "2017 – 2018",
+      "role": "Consultante",
+      "organization": "INDECOPI (Institut national de défense de la concurrence et de la protection de la propriété intellectuelle)",
+      "period": "2020",
       "location": "Lima, Pérou",
-      "description": "Conseil pour des organisations à but non lucratif et des entreprises sociales."
+      "description": [
+        "Analyse des défis liés à l’application des droits de propriété intellectuelle et propositions d’amélioration des processus.",
+        "Participation à une stratégie ayant réduit de 20 % les délais de traitement des dossiers."
+      ]
+    },
+    {
+      "role": "Stagiaire, Relations investisseurs",
+      "organization": "Camposol",
+      "period": "2016",
+      "location": "Lima, Pérou"
+    },
+    {
+      "role": "Stagiaire, Bureau des études économiques",
+      "organization": "Ministère du Commerce extérieur et du Tourisme (MINCETUR)",
+      "period": "2015",
+      "location": "Lima, Pérou"
     }
   ],
   "education": [
     {
       "degree": "Master en politiques publiques",
-      "institution": "Hertie School, Berlin, Allemagne",
-      "period": "2022 – 2024"
+      "institution": "Hertie School",
+      "period": "2021 – 2023"
     },
     {
       "degree": "Licence en économie",
-      "institution": "Université catholique pontificale du Pérou",
-      "period": "2014 – 2018"
+      "institution": "Pontificia Universidad Católica del Perú",
+      "period": "2012 – 2016"
     }
   ],
+  "skills": [
+    "Power BI",
+    "RStudio",
+    "Python",
+    "QGIS",
+    "STATA",
+    "n8n",
+    "Politiques publiques",
+    "Gestion de projets",
+    "Visualisation de données",
+    "Conception d’enquêtes",
+    "Économétrie"
+  ],
   "languages": [
-    { "name": "Anglais", "level": "Courant" },
-    { "name": "Espagnol", "level": "Courant" },
+    { "name": "Anglais", "level": "Professionnel complet" },
+    { "name": "Espagnol", "level": "Langue maternelle" },
     { "name": "Français", "level": "Compétence professionnelle" }
   ],
   "publications": [
     {
-      "title": "Impact de la participation des femmes en politique sur le développement et la mise en œuvre de politiques de soins progressistes en Amérique latine et dans les Caraïbes",
-      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean?channel=doi&linkId=6489bb53712bd82962230b14&showFulltext=true"
+      "title": "Impact de l’intelligence artificielle et de la numérisation sur les communautés autochtones",
+      "year": 2025
+    },
+    {
+      "title": "Impact de la participation politique des femmes sur l’élaboration des politiques de soins en Amérique latine",
+      "year": 2023
+    },
+    {
+      "title": "Nouveaux outils pour analyser l’occupation du territoire péruvien",
+      "year": 2021
+    },
+    {
+      "title": "Rapport sur les écarts et la pertinence des centres peuplés ruraux",
+      "year": 2021
     }
   ],
   "awards": [
     {
-      "title": "Bourse, Hertie School",
-      "year": "2022 – 2024"
+      "title": "Prix des Bonnes pratiques en gestion publique (« Mi Mantenimiento »)",
+      "year": 2019
+    },
+    {
+      "title": "Bourse Hertie School",
+      "year": "2021 – 2023"
+    },
+    {
+      "title": "Boursière, 61e Programme d’études supérieures, ONU Genève",
+      "year": 2023
     }
   ]
 }

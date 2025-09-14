@@ -1,93 +1,180 @@
 {
   "name": "Cintya Huaire",
-  "title": "Especialista en Políticas | Protección Social | Género | Investigación",
+  "title": "Analista de Datos y Políticas | Innovación Digital en Migración y Protección Social",
   "contact": {
     "email": "edithuaire@gmail.com",
-    "phone": "+49 157 51369758",
-    "location": "Berlín, Alemania",
+    "phone": "+356 79655302",
+    "location": "La Valeta, Malta",
     "linkedin": "https://www.linkedin.com/in/cintyahuaire/",
     "github": "https://github.com/blanedi"
   },
-  "summary": "Especialista en políticas con experiencia en protección social, género e investigación. Trayectoria comprobada en organizaciones internacionales y agencias gubernamentales, con experiencia en gestión de proyectos, análisis de políticas y colaboración intercultural.",
+  "summary": "Impulsada por un firme compromiso con el desarrollo inclusivo, combino experiencia en economía, políticas públicas y análisis de datos para diseñar soluciones escalables. Con más de 6 años de experiencia en UNICEF, OIT, ICMPD y el sector público peruano, conecto análisis de datos complejos con políticas aplicables en protección social, migración, género y transformación digital.",
   "experience": [
     {
-      "role": "Consultora, Centro Internacional para el Desarrollo de Políticas Migratorias (ICMPD)",
+      "role": "Oficial de Proyecto Junior, Modernización e Innovación Digital",
+      "organization": "ICMPD",
       "period": "2024 – Presente",
-      "location": "Viena, Austria (Remoto)",
-      "description": "Apoyo al desarrollo de políticas migratorias y proyectos de investigación en Europa y América Latina."
+      "location": "La Valeta, Malta",
+      "description": [
+        "Desarrollo de tableros modulares en Power BI para optimizar flujos de datos y mejorar la toma de decisiones en proyectos de migración en el Mediterráneo.",
+        "Realización de análisis costo-beneficio de herramientas de IA (p. ej. soluciones CAT), orientando la asignación de recursos y la integración tecnológica.",
+        "Implementación piloto de informes impulsados por IA para eventos de alto nivel, reduciendo los tiempos de entrega de días a minutos.",
+        "Mapeo de soluciones digitales alineadas con los principios de Infraestructura Pública Digital (DPI), fomentando una cultura de innovación."
+      ]
     },
     {
-      "role": "Consultora, Organización Internacional del Trabajo (OIT)",
+      "role": "Consultora de Investigación, FUNDAMENTALS",
+      "organization": "Organización Internacional del Trabajo (OIT)",
       "period": "2023 – 2024",
       "location": "Ginebra, Suiza (Remoto)",
-      "description": "Contribución a iniciativas de protección social e igualdad de género, incluyendo investigación y recomendaciones de políticas."
+      "description": [
+        "Organización y análisis de datos sobre trabajo infantil y forzoso a partir de encuestas de hogares, la OIT y otras fuentes para apoyar investigaciones globales.",
+        "Contribución a los avances metodológicos en la medición del trabajo forzoso y la trata de personas.",
+        "Desarrollo de modelos estadísticos y herramientas de visualización utilizando R y Stata.",
+        "Apoyo en talleres y misiones de campo, fortaleciendo el intercambio de conocimientos entre regiones."
+      ]
     },
     {
-      "role": "Consultora, UNICEF América Latina y el Caribe",
+      "role": "Practicante de Política Social",
+      "organization": "UNICEF América Latina y el Caribe",
       "period": "2022 – 2023",
       "location": "Ciudad de Panamá, Panamá (Remoto)",
-      "description": "Liderazgo en investigación sobre sistemas de cuidado y política social en América Latina y el Caribe."
+      "description": [
+        "Diseño y gestión de boletines, seminarios web y resúmenes de investigación para apoyar las redes de política social de la región.",
+        "Redacción de secciones del documento insignia de UNICEF sobre sistemas de cuidados en América Latina y el Caribe.",
+        "Fortalecimiento de la gestión del conocimiento mediante el uso de MailChimp, SharePoint y redes sociales."
+      ]
     },
     {
-      "role": "Asesora, Ministerio de Vivienda, Construcción y Saneamiento, Perú",
-      "period": "2021 – 2022",
+      "role": "Consultora de Políticas Públicas",
+      "organization": "Ministerio de Vivienda, Construcción y Saneamiento, Perú",
+      "period": "2021",
       "location": "Lima, Perú",
-      "description": "Asesoría en políticas públicas e implementación de programas de vivienda y saneamiento."
+      "description": [
+        "Construcción de la base de indicadores nacionales para 94,922 centros poblados utilizando R y Stata.",
+        "Contribución al nuevo marco de clasificación rural–urbano y coautoría de publicaciones estratégicas.",
+        "Entrega de análisis SIG y tableros utilizados por planificadores nacionales para priorización y planificación de escenarios."
+      ]
     },
     {
-      "role": "Asesora, Ministerio de Economía y Finanzas, Perú",
+      "role": "Consultora Económica",
+      "organization": "Ministerio de Economía y Finanzas, Perú",
       "period": "2020 – 2021",
       "location": "Lima, Perú",
-      "description": "Apoyo en análisis de políticas económicas y gestión de proyectos."
+      "description": [
+        "Diseño de nuevos indicadores de desempeño para dar seguimiento a proyectos de infraestructura durante la crisis del COVID-19.",
+        "Sistematización de bases de datos administrativas en apoyo a la reforma del Sistema de Tesorería en colaboración con el FMI.",
+        "Creación de tableros para monitorear proyectos sectoriales valorados en USD 2.56M y redacción de decretos legales."
+      ]
     },
     {
-      "role": "Asesora, Ministerio de Educación, Perú",
-      "period": "2019 – 2020",
+      "role": "Consultora Económica",
+      "organization": "Ministerio de Educación, Perú",
+      "period": "2018 – 2020",
       "location": "Lima, Perú",
-      "description": "Trabajo en políticas educativas y evaluación de programas."
+      "description": [
+        "Mejora del Programa Nacional de Mantenimiento Escolar ('Mi Mantenimiento') para ayudar a 51,000 directores a dar seguimiento al gasto en infraestructura.",
+        "Incremento de la tasa de cumplimiento en 15% y ganador del Premio Buenas Prácticas en Gestión Pública 2019.",
+        "Desarrollo de estrategias de asignación y metodologías multicriterio para la distribución de USD 101M en fondos escolares.",
+        "Reducción del 50% en tiempos de intervención gracias a mejoras en la calidad de datos y procesos de mitigación de riesgos."
+      ]
     },
     {
-      "role": "Consultora, Metis Gaia S.AC",
-      "period": "2018 – 2019",
+      "role": "Analista Junior",
+      "organization": "Metis Gaia S.AC",
+      "period": "2017 – 2018",
       "location": "Lima, Perú",
-      "description": "Consultoría en proyectos ambientales y sociales."
+      "description": [
+        "Realización de análisis cualitativo en proyectos ambientales y sociales.",
+        "Planificación y supervisión de trabajo de campo, incluyendo diseño de encuestas y depuración de datos.",
+        "Apoyo a proyectos mineros mediante análisis estadístico y económico."
+      ]
     }
   ],
   "other_experience": [
     {
-      "role": "Consultora, 180 Degrees Consulting",
-      "period": "2017 – 2018",
+      "role": "Consultora",
+      "organization": "Indecopi (Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual)",
+      "period": "2020",
       "location": "Lima, Perú",
-      "description": "Consultoría para organizaciones sin fines de lucro y empresas sociales."
+      "description": [
+        "Investigación de retos en la aplicación de derechos de propiedad intelectual y propuesta de mejoras de procesos.",
+        "Contribución a una estrategia que redujo en 20% los tiempos de tramitación de casos."
+      ]
+    },
+    {
+      "role": "Practicante, Relaciones con Inversionistas",
+      "organization": "Camposol",
+      "period": "2016",
+      "location": "Lima, Perú"
+    },
+    {
+      "role": "Practicante, Oficina de Estudios Económicos",
+      "organization": "Ministerio de Comercio Exterior y Turismo (MINCETUR)",
+      "period": "2015",
+      "location": "Lima, Perú"
     }
   ],
   "education": [
     {
       "degree": "Maestría en Políticas Públicas",
-      "institution": "Hertie School, Berlín, Alemania",
-      "period": "2022 – 2024"
+      "institution": "Hertie School",
+      "period": "2021 – 2023"
     },
     {
       "degree": "Licenciatura en Economía",
       "institution": "Pontificia Universidad Católica del Perú",
-      "period": "2014 – 2018"
+      "period": "2012 – 2016"
     }
   ],
+  "skills": [
+    "Power BI",
+    "RStudio",
+    "Python",
+    "QGIS",
+    "STATA",
+    "n8n",
+    "Políticas Públicas",
+    "Gestión de Proyectos",
+    "Visualización de Datos",
+    "Diseño de Encuestas",
+    "Econometría"
+  ],
   "languages": [
-    { "name": "Inglés", "level": "Nativo/Fluido" },
-    { "name": "Español", "level": "Nativo/Fluido" },
-    { "name": "Francés", "level": "Competencia profesional" }
+    { "name": "Inglés", "level": "Profesional Completo" },
+    { "name": "Español", "level": "Nativo" },
+    { "name": "Francés", "level": "Competencia Profesional" }
   ],
   "publications": [
     {
-      "title": "Impacto de la participación de las mujeres en la política en el desarrollo e implementación de políticas de cuidado progresistas en América Latina y el Caribe",
-      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean?channel=doi&linkId=6489bb53712bd82962230b14&showFulltext=true"
+      "title": "Impacto de la IA y la Digitalización en las Comunidades Indígenas",
+      "year": 2025
+    },
+    {
+      "title": "Impacto de la participación política de las mujeres en el desarrollo de políticas de cuidado en América Latina",
+      "year": 2023
+    },
+    {
+      "title": "Nuevas herramientas para analizar la ocupación del territorio peruano",
+      "year": 2021
+    },
+    {
+      "title": "Reporte de brechas y relevancias de centros poblados rurales",
+      "year": 2021
     }
   ],
   "awards": [
     {
-      "title": "Beca, Hertie School",
-      "year": "2022 – 2024"
+      "title": "Premio Buenas Prácticas en Gestión Pública (Mi Mantenimiento)",
+      "year": 2019
+    },
+    {
+      "title": "Beca Hertie School",
+      "year": "2021 – 2023"
+    },
+    {
+      "title": "Becaria, 61º Programa de Estudios de Posgrado, ONU Ginebra",
+      "year": 2023
     }
   ]
 }

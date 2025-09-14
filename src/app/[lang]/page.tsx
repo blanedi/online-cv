@@ -14,20 +14,30 @@ import path from "path";
 
 const LOCALES = ["en", "es", "fr"];
 
-function getCVData(lang: string) {
+
+async function getCVData(lang: string) {
   try {
     const filePath = path.join(process.cwd(), "src/data/cv." + lang + ".json");
-    const file = fs.readFileSync(filePath, "utf-8");
+    const file = await fs.promises.readFile(filePath, "utf-8");
     return JSON.parse(file);
   } catch {
     return null;
   }
 }
 
-export default function Page({ params }: { params: { lang: string } }) {
-  const lang = params.lang;
+
+export async function params() {
+  'use server';
+  // This function is called by Next.js to provide params for the route
+  return {};
+}
+
+export default async function Page({ params }: { params: { lang: string } }) {
+  // Await params as required by Next.js 15+
+  const awaitedParams = await Promise.resolve(params);
+  const lang = awaitedParams.lang;
   if (!LOCALES.includes(lang)) notFound();
-  const data = getCVData(lang);
+  const data = await getCVData(lang);
   if (!data) notFound();
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-[#101010] py-8 px-2">

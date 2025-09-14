@@ -1,93 +1,180 @@
 {
   "name": "Cintya Huaire",
-  "title": "Policy Specialist | Social Protection | Gender | Research",
+  "title": "Data & Policy Analyst | Digital Innovation for Migration & Social Protection",
   "contact": {
     "email": "edithuaire@gmail.com",
-    "phone": "+49 157 51369758",
-    "location": "Berlin, Germany",
+    "phone": "+356 79655302",
+    "location": "Valletta, Malta",
     "linkedin": "https://www.linkedin.com/in/cintyahuaire/",
     "github": "https://github.com/blanedi"
   },
-  "summary": "Experienced policy specialist with a focus on social protection, gender, and research. Proven track record in international organizations and government agencies, with expertise in project management, policy analysis, and cross-cultural collaboration.",
+  "summary": "Driven by a deep commitment to inclusive development, I combine expertise in economics, public policy, and data analytics to design scalable solutions. With 6+ years of experience across UNICEF, ILO, ICMPD, and the Peruvian government, I bridge complex data analysis with actionable policies in social protection, migration, gender, and digital transformation.",
   "experience": [
     {
-      "role": "Consultant, International Centre for Migration Policy Development (ICMPD)",
+      "role": "Junior Project Officer, Modernisation and Digital Innovation",
+      "organization": "ICMPD",
       "period": "2024 – Present",
-      "location": "Vienna, Austria (Remote)",
-      "description": "Supporting migration policy development and research projects across Europe and Latin America."
+      "location": "Valletta, Malta",
+      "description": [
+        "Developed modular Power BI dashboards to streamline data flows and improve decision-making across Mediterranean migration projects.",
+        "Conducted cost-benefit analyses of AI tools (e.g., CAT solutions), guiding resource allocation and technology integration.",
+        "Piloted AI-driven reporting solutions for high-level events, cutting reporting turnaround from days to minutes.",
+        "Mapped digital solutions aligned with Digital Public Infrastructure (DPI) principles, fostering a culture of innovation."
+      ]
     },
     {
-      "role": "Consultant, International Labour Organization (ILO)",
+      "role": "Research Consultant, FUNDAMENTALS",
+      "organization": "International Labour Organization (ILO)",
       "period": "2023 – 2024",
       "location": "Geneva, Switzerland (Remote)",
-      "description": "Contributed to social protection and gender equality initiatives, including research and policy recommendations."
+      "description": [
+        "Organized and analyzed child and forced labor data from household surveys, ILO, and other sources to support global research.",
+        "Contributed to methodological advancements in measuring forced labor and human trafficking.",
+        "Developed statistical models and visualization tools using R and Stata.",
+        "Supported workshops and field missions, enhancing knowledge exchange across regions."
+      ]
     },
     {
-      "role": "Consultant, UNICEF Latin America and the Caribbean",
+      "role": "Social Policy Intern",
+      "organization": "UNICEF Latin America and the Caribbean",
       "period": "2022 – 2023",
       "location": "Panama City, Panama (Remote)",
-      "description": "Led research on care systems and social policy in Latin America and the Caribbean."
+      "description": [
+        "Designed and managed newsletters, webinars, and research briefs to support regional social policy networks.",
+        "Drafted sections of UNICEF’s flagship paper on care systems in Latin America and the Caribbean.",
+        "Strengthened knowledge management through MailChimp, SharePoint, and social media tools."
+      ]
     },
     {
-      "role": "Advisor, Ministry of Housing Construction and Sanitation, Peru",
-      "period": "2021 – 2022",
+      "role": "Public Policy Consultant",
+      "organization": "Ministry of Housing, Construction and Sanitation, Peru",
+      "period": "2021",
       "location": "Lima, Peru",
-      "description": "Advised on public policy and program implementation for housing and sanitation."
+      "description": [
+        "Built national indicators database for 94,922 populated centers using R and Stata.",
+        "Contributed to a new rural–urban classification framework and co-authored flagship publications.",
+        "Delivered GIS analytics and dashboards used by national planners for prioritization and scenario planning."
+      ]
     },
     {
-      "role": "Advisor, Ministry of Economy and Finance, Peru",
+      "role": "Economic Consultant",
+      "organization": "Ministry of Economy and Finance, Peru",
       "period": "2020 – 2021",
       "location": "Lima, Peru",
-      "description": "Supported economic policy analysis and project management."
+      "description": [
+        "Designed new performance indicators to track infrastructure projects during the COVID-19 crisis.",
+        "Systematized administrative databases to support Treasury System reform efforts with the IMF.",
+        "Created dashboards to monitor sectoral projects valued at USD 2.56M and drafted legal decrees."
+      ]
     },
     {
-      "role": "Advisor, Ministry of Education, Peru",
-      "period": "2019 – 2020",
+      "role": "Economic Consultant",
+      "organization": "Ministry of Education, Peru",
+      "period": "2018 – 2020",
       "location": "Lima, Peru",
-      "description": "Worked on education policy and program evaluation."
+      "description": [
+        "Improved the National Maintenance Program ('Mi Mantenimiento') to help 51,000 school principals track infrastructure spending.",
+        "Boosted compliance rates by 15% and won the 2019 Good Practices in Public Management Award.",
+        "Developed allocation strategies and multi-criteria methodologies for USD 101M in school funding.",
+        "Reduced intervention times by 50% by enhancing data quality and risk mitigation processes."
+      ]
     },
     {
-      "role": "Consultant, Metis Gaia S.AC",
-      "period": "2018 – 2019",
+      "role": "Junior Analyst",
+      "organization": "Metis Gaia S.AC",
+      "period": "2017 – 2018",
       "location": "Lima, Peru",
-      "description": "Consulted on environmental and social projects."
+      "description": [
+        "Conducted qualitative analysis on environmental and social projects.",
+        "Planned and supervised fieldwork, including survey design and data cleaning.",
+        "Supported mining projects with statistical and economic analysis."
+      ]
     }
   ],
   "other_experience": [
     {
-      "role": "Consultant, 180 Degrees Consulting",
-      "period": "2017 – 2018",
+      "role": "Consultant",
+      "organization": "Indecopi (National Institute for the Defense of Competition and Protection of Intellectual Property)",
+      "period": "2020",
       "location": "Lima, Peru",
-      "description": "Provided consulting services for non-profits and social enterprises."
+      "description": [
+        "Researched challenges in intellectual property enforcement and proposed process improvements.",
+        "Contributed to a strategy that reduced case processing times by 20%."
+      ]
+    },
+    {
+      "role": "Intern, Investor Relations",
+      "organization": "Camposol",
+      "period": "2016",
+      "location": "Lima, Peru"
+    },
+    {
+      "role": "Intern, Economic Studies Office",
+      "organization": "Ministry of Foreign Trade and Tourism (MINCETUR)",
+      "period": "2015",
+      "location": "Lima, Peru"
     }
   ],
   "education": [
     {
-      "degree": "MSc Public Policy",
-      "institution": "Hertie School, Berlin, Germany",
-      "period": "2022 – 2024"
+      "degree": "Master of Public Policy",
+      "institution": "Hertie School",
+      "period": "2021 – 2023"
     },
     {
-      "degree": "BA Economics",
+      "degree": "BA in Economics",
       "institution": "Pontifical Catholic University of Peru",
-      "period": "2014 – 2018"
+      "period": "2012 – 2016"
     }
   ],
+  "skills": [
+    "Power BI",
+    "RStudio",
+    "Python",
+    "QGIS",
+    "STATA",
+    "n8n",
+    "Public Policy",
+    "Project Management",
+    "Data Visualization",
+    "Survey Design",
+    "Econometrics"
+  ],
   "languages": [
-    { "name": "English", "level": "Native/Fluent" },
-    { "name": "Spanish", "level": "Native/Fluent" },
-    { "name": "French", "level": "Professional Working Proficiency" }
+    { "name": "English", "level": "Full Professional" },
+    { "name": "Spanish", "level": "Native" },
+    { "name": "French", "level": "Professional Working" }
   ],
   "publications": [
     {
-      "title": "Impact of women's participation in politics on the development and implementation of progressive care policies in Latin America and the Caribbean",
-      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean?channel=doi&linkId=6489bb53712bd82962230b14&showFulltext=true"
+      "title": "Impact of AI and Digitalisation on Indigenous Communities",
+      "year": 2025
+    },
+    {
+      "title": "Impact of women's participation in politics on the development of care policies in Latin America",
+      "year": 2023
+    },
+    {
+      "title": "Nuevas herramientas para analizar la ocupación del territorio peruano",
+      "year": 2021
+    },
+    {
+      "title": "Reporte de brechas y relevancias de centros poblados rurales",
+      "year": 2021
     }
   ],
   "awards": [
     {
-      "title": "Scholarship, Hertie School",
-      "year": "2022 – 2024"
+      "title": "Good Practices in Public Management Award (Mi Mantenimiento)",
+      "year": 2019
+    },
+    {
+      "title": "Hertie School Scholarship",
+      "year": "2021 – 2023"
+    },
+    {
+      "title": "Fellow, 61st Graduate Study Programme, UN Geneva",
+      "year": 2023
     }
   ]
 }
