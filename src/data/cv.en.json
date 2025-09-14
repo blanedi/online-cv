@@ -1,6 +1,6 @@
 {
   "name": "Cintya Huaire",
-  "title": "Data & Policy Analyst | Digital Innovation for Migration & Social Protection",
+  "title": "Data & Policy Analyst | Policy Specialist | Digital Innovation for Migration & Social Protection",
   "contact": {
     "email": "edithuaire@gmail.com",
     "phone": "+356 79655302",
@@ -146,23 +146,32 @@
     { "name": "French", "level": "Professional Working" }
   ],
   "publications": [
-    {
-      "title": "Impact of AI and Digitalisation on Indigenous Communities",
-      "year": 2025
-    },
-    {
-      "title": "Impact of women's participation in politics on the development of care policies in Latin America",
-      "year": 2023
-    },
-    {
-      "title": "Nuevas herramientas para analizar la ocupación del territorio peruano",
-      "year": 2021
-    },
-    {
-      "title": "Reporte de brechas y relevancias de centros poblados rurales",
-      "year": 2021
-    }
-  ],
+  {
+    "title": "Impact of AI and Digitalisation on Indigenous Communities",
+    "year": 2025,
+    "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view"
+  },
+  {
+    "title": "Forging a Just Transition: Towards Green Jobs and Rights-Based Futures (pp. 169-217)",
+    "year": 2023,
+    "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf"
+  },
+  {
+    "title": "Impact of women's participation in politics on the development of care policies in Latin America",
+    "year": 2023,
+    "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean"
+  },
+  {
+    "title": "Nuevas herramientas para analizar la ocupación del territorio peruano",
+    "year": 2021,
+    "link": "https://revistas.pucp.edu.pe/index.php/espacioydesarrollo/article/view/25549"
+  },
+  {
+    "title": "Reporte de brechas y relevancias de centros poblados rurales",
+    "year": 2021,
+    "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2014522-reporte-brechas-y-relevancia-de-centros-poblados"
+  }
+],
   "awards": [
     {
       "title": "Good Practices in Public Management Award (Mi Mantenimiento)",

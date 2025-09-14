@@ -1,6 +1,6 @@
 {
   "name": "Cintya Huaire",
-  "title": "Analista de Datos y Políticas | Innovación Digital en Migración y Protección Social",
+  "title": "Analista de Datos y Políticas | Especialista en políticas públicas | Especialista en Innovación Digital en Migración y Protección Social",
   "contact": {
     "email": "edithuaire@gmail.com",
     "phone": "+356 79655302",
@@ -148,19 +148,28 @@
   "publications": [
     {
       "title": "Impacto de la IA y la Digitalización en las Comunidades Indígenas",
-      "year": 2025
+      "year": 2025,
+      "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view"
+    },
+    {
+      "title": "Forjando una Transición Justa: Hacia empleos verdes y futuros basados en derechos (pp. 169-217)",
+      "year": 2023,
+      "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf"
     },
     {
       "title": "Impacto de la participación política de las mujeres en el desarrollo de políticas de cuidado en América Latina",
-      "year": 2023
+      "year": 2023,
+      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean"
     },
     {
       "title": "Nuevas herramientas para analizar la ocupación del territorio peruano",
-      "year": 2021
+      "year": 2021,
+      "link": "https://repositorio.mincetur.gob.pe/handle/20.500.12827/107"
     },
     {
       "title": "Reporte de brechas y relevancias de centros poblados rurales",
-      "year": 2021
+      "year": 2021,
+      "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/24744-reporte-de-brechas-y-relevancias-de-centros-poblados-rurales"
     }
   ],
   "awards": [
