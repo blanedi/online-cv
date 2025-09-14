@@ -4,7 +4,7 @@
   "contact": {
     "email": "edithuaire@gmail.com",
     "phone": "+356 79655302",
-    "location": "La Valeta, Malta",
+    "location": "La Valletta, Malta",
     "linkedin": "https://www.linkedin.com/in/cintyahuaire/",
     "github": "https://github.com/blanedi"
   },
@@ -13,7 +13,7 @@
     {
       "role": "Oficial de Proyecto Junior, Modernización e Innovación Digital",
       "organization": "ICMPD",
-      "period": "2024 – Presente",
+      "period": "Sep 2024 – Presente",
       "location": "La Valeta, Malta",
       "description": [
         "Desarrollo de tableros modulares en Power BI para optimizar flujos de datos y mejorar la toma de decisiones en proyectos de migración en el Mediterráneo.",
@@ -23,10 +23,10 @@
       ]
     },
     {
-      "role": "Consultora de Investigación, FUNDAMENTALS",
+      "role": "Trainee de Investigación y Evaluación, FUNDAMENTALS",
       "organization": "Organización Internacional del Trabajo (OIT)",
-      "period": "2023 – 2024",
-      "location": "Ginebra, Suiza (Remoto)",
+      "period": "Feb 2024 – Ago 2024",
+      "location": "Ginebra, Suiza",
       "description": [
         "Organización y análisis de datos sobre trabajo infantil y forzoso a partir de encuestas de hogares, la OIT y otras fuentes para apoyar investigaciones globales.",
         "Contribución a los avances metodológicos en la medición del trabajo forzoso y la trata de personas.",
@@ -37,7 +37,7 @@
     {
       "role": "Practicante de Política Social",
       "organization": "UNICEF América Latina y el Caribe",
-      "period": "2022 – 2023",
+      "period": "Oct 2022 – Jul 2023",
       "location": "Ciudad de Panamá, Panamá (Remoto)",
       "description": [
         "Diseño y gestión de boletines, seminarios web y resúmenes de investigación para apoyar las redes de política social de la región.",
@@ -48,7 +48,7 @@
     {
       "role": "Consultora de Políticas Públicas",
       "organization": "Ministerio de Vivienda, Construcción y Saneamiento, Perú",
-      "period": "2021",
+      "period": "Ene 2021 - Jul 2021",
       "location": "Lima, Perú",
       "description": [
         "Construcción de la base de indicadores nacionales para 94,922 centros poblados utilizando R y Stata.",
@@ -59,7 +59,7 @@
     {
       "role": "Consultora Económica",
       "organization": "Ministerio de Economía y Finanzas, Perú",
-      "period": "2020 – 2021",
+      "period": "Feb 2020 – Dec 2020",
       "location": "Lima, Perú",
       "description": [
         "Diseño de nuevos indicadores de desempeño para dar seguimiento a proyectos de infraestructura durante la crisis del COVID-19.",
@@ -70,7 +70,7 @@
     {
       "role": "Consultora Económica",
       "organization": "Ministerio de Educación, Perú",
-      "period": "2018 – 2020",
+      "period": "Feb 2018 – Ene 2020",
       "location": "Lima, Perú",
       "description": [
         "Mejora del Programa Nacional de Mantenimiento Escolar ('Mi Mantenimiento') para ayudar a 51,000 directores a dar seguimiento al gasto en infraestructura.",
@@ -82,7 +82,7 @@
     {
       "role": "Analista Junior",
       "organization": "Metis Gaia S.AC",
-      "period": "2017 – 2018",
+      "period": "May 2017 – Dic 2017",
       "location": "Lima, Perú",
       "description": [
         "Realización de análisis cualitativo en proyectos ambientales y sociales.",
