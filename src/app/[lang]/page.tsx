@@ -26,11 +26,6 @@ async function getCVData(lang: string) {
 }
 
 
-export async function params() {
-  'use server';
-  // This function is called by Next.js to provide params for the route
-  return {};
-}
 
 export default async function Page({ params }: { params: { lang: string } }) {
   // Await params as required by Next.js 15+
