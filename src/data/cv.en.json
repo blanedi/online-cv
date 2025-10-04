@@ -78,7 +78,9 @@
         "Developed allocation strategies and multi-criteria methodologies for USD 101M in school funding.",
         "Reduced intervention times by 50% by enhancing data quality and risk mitigation processes."
       ]
-    },
+    }
+  ],
+  "other_experience": [
     {
       "role": "Junior Analyst",
       "organization": "Metis Gaia S.AC",
@@ -89,9 +91,7 @@
         "Planned and supervised fieldwork, including survey design and data cleaning.",
         "Supported mining projects with statistical and economic analysis."
       ]
-    }
-  ],
-  "other_experience": [
+    },
     {
       "role": "Consultant",
       "organization": "Indecopi (National Institute for the Defense of Competition and Protection of Intellectual Property)",
@@ -123,67 +123,88 @@
     },
     {
       "degree": "BA in Economics",
-      "institution": "Pontifical Catholic University of Peru",
+      "institution": "Universidad del Pacifico",
       "period": "2012 – 2016"
     }
   ],
-  "skills": [
-    "Power BI",
-    "RStudio",
-    "Python",
-    "QGIS",
-    "STATA",
-    "n8n",
-    "Public Policy",
-    "Project Management",
-    "Data Visualization",
-    "Survey Design",
-    "Econometrics"
-  ],
+  "skills": {
+    "technical": [
+      { "name": "Power BI", "level": 90 },
+      { "name": "Tableau", "level": 85 },
+      { "name": "R (data.table, ggplot2)", "level": 90 },
+      { "name": "Python (Pandas, NumPy)", "level": 85 },
+      { "name": "STATA", "level": 95 },
+      { "name": "QGIS", "level": 80 },
+      { "name": "n8n", "level": 75 },
+      { "name": "Power Automate", "level": 70 },
+      { "name": "SurveyCTO", "level": 85 },
+      { "name": "GPT-based tools", "level": 80 }
+    ],
+    "soft": [
+      { "name": "Policy Analysis & Development", "level": 95 },
+      { "name": "Cross-Cultural Communication", "level": 90 },
+      { "name": "Project Management", "level": 85 },
+      { "name": "Research & Analytical Thinking", "level": 95 },
+      { "name": "Stakeholder Engagement", "level": 90 },
+      { "name": "Knowledge Management", "level": 85 },
+      { "name": "Strategic Planning", "level": 80 },
+      { "name": "Innovation & Digital Transformation", "level": 85 }
+    ]
+  },
   "languages": [
-    { "name": "English", "level": "Full Professional" },
     { "name": "Spanish", "level": "Native" },
+    { "name": "English", "level": "Full Professional" },
     { "name": "French", "level": "Professional Working" }
   ],
   "publications": [
   {
     "title": "Impact of AI and Digitalisation on Indigenous Communities",
     "year": 2025,
-    "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view"
+    "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view",
+    "pdf_file": "impact_ai_digitalisation_indigenous_communities_2025.pdf",
+    "description": "This research explores how artificial intelligence and digital transformation impact indigenous communities, examining both opportunities for development and risks to cultural preservation. The study provides recommendations for inclusive digital policies."
   },
   {
     "title": "Forging a Just Transition: Towards Green Jobs and Rights-Based Futures (pp. 169-217)",
     "year": 2023,
-    "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf"
+    "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf",
+    "pdf_file": "forging_just_transition_green_jobs_2023.pdf",
+    "description": "A comprehensive analysis of the transition to green jobs and sustainable economies, focusing on rights-based approaches. This section examines policy frameworks needed to ensure environmental sustainability while protecting worker rights and social equity."
   },
   {
     "title": "Impact of women's participation in politics on the development of care policies in Latin America",
     "year": 2023,
-    "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean"
+    "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean",
+    "pdf_file": "women_participation_politics_care_policies_latin_america_2023.pdf",
+    "description": "Master's thesis examining the correlation between women's political representation and the development of progressive care policies across Latin America and the Caribbean. The research analyzes policy outcomes in countries with varying levels of female political participation."
   },
   {
     "title": "Nuevas herramientas para analizar la ocupación del territorio peruano",
     "year": 2021,
-    "link": "https://revistas.pucp.edu.pe/index.php/espacioydesarrollo/article/view/25549"
+    "link": "https://revistas.pucp.edu.pe/index.php/espacioydesarrollo/article/view/25549",
+    "pdf_file": "nuevas_herramientas_analizar_territorio_peruano_2021.pdf",
+    "description": "This paper presents innovative analytical tools for studying territorial occupation patterns in Peru, combining GIS technology with demographic data. The methodology provides insights for urban planning and infrastructure development in populated centers."
   },
   {
     "title": "Reporte de brechas y relevancias de centros poblados rurales",
     "year": 2021,
-    "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2014522-reporte-brechas-y-relevancia-de-centros-poblados"
+    "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2014522-reporte-brechas-y-relevancia-de-centros-poblados",
+    "pdf_file": "reporte_brechas_relevancias_centros_poblados_rurales_2021.pdf",
+    "description": "Government report analyzing gaps and relevance in rural population centers across Peru. The study identifies infrastructure needs and development priorities for 94,922 populated centers, informing national housing and development policies."
   }
 ],
   "awards": [
     {
-      "title": "Good Practices in Public Management Award (Mi Mantenimiento)",
-      "year": 2019
+      "title": "Fellow, 61st Graduate Study Programme, UN Geneva",
+      "year": 2023
     },
     {
       "title": "Hertie School Scholarship",
       "year": "2021 – 2023"
     },
     {
-      "title": "Fellow, 61st Graduate Study Programme, UN Geneva",
-      "year": 2023
+      "title": "Good Practices in Public Management Award (Mi Mantenimiento)",
+      "year": 2019
     }
   ]
 }

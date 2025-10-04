@@ -78,7 +78,9 @@
         "Desarrollo de estrategias de asignación y metodologías multicriterio para la distribución de USD 101M en fondos escolares.",
         "Reducción del 50% en tiempos de intervención gracias a mejoras en la calidad de datos y procesos de mitigación de riesgos."
       ]
-    },
+    }
+  ],
+  "other_experience": [
     {
       "role": "Analista Junior",
       "organization": "Metis Gaia S.AC",
@@ -89,9 +91,7 @@
         "Planificación y supervisión de trabajo de campo, incluyendo diseño de encuestas y depuración de datos.",
         "Apoyo a proyectos mineros mediante análisis estadístico y económico."
       ]
-    }
-  ],
-  "other_experience": [
+    },
     {
       "role": "Consultora",
       "organization": "Indecopi (Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual)",
@@ -123,67 +123,88 @@
     },
     {
       "degree": "Licenciatura en Economía",
-      "institution": "Pontificia Universidad Católica del Perú",
+      "institution": "Universidad del Pacifico",
       "period": "2012 – 2016"
     }
   ],
-  "skills": [
-    "Power BI",
-    "RStudio",
-    "Python",
-    "QGIS",
-    "STATA",
-    "n8n",
-    "Políticas Públicas",
-    "Gestión de Proyectos",
-    "Visualización de Datos",
-    "Diseño de Encuestas",
-    "Econometría"
-  ],
+  "skills": {
+    "technical": [
+      { "name": "Power BI", "level": 90 },
+      { "name": "Tableau", "level": 85 },
+      { "name": "R (data.table, ggplot2)", "level": 90 },
+      { "name": "Python (Pandas, NumPy)", "level": 85 },
+      { "name": "STATA", "level": 95 },
+      { "name": "QGIS", "level": 80 },
+      { "name": "n8n", "level": 75 },
+      { "name": "Power Automate", "level": 70 },
+      { "name": "SurveyCTO", "level": 85 },
+      { "name": "Herramientas basadas en GPT", "level": 80 }
+    ],
+    "soft": [
+      { "name": "Análisis y Desarrollo de Políticas", "level": 95 },
+      { "name": "Comunicación Intercultural", "level": 90 },
+      { "name": "Gestión de Proyectos", "level": 85 },
+      { "name": "Investigación y Pensamiento Analítico", "level": 95 },
+      { "name": "Participación de Stakeholders", "level": 90 },
+      { "name": "Gestión del Conocimiento", "level": 85 },
+      { "name": "Planificación Estratégica", "level": 80 },
+      { "name": "Innovación y Transformación Digital", "level": 85 }
+    ]
+  },
   "languages": [
-    { "name": "Inglés", "level": "Profesional Completo" },
     { "name": "Español", "level": "Nativo" },
+    { "name": "Inglés", "level": "Profesional Completo" },
     { "name": "Francés", "level": "Competencia Profesional" }
   ],
   "publications": [
     {
       "title": "Impacto de la IA y la Digitalización en las Comunidades Indígenas",
       "year": 2025,
-      "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view"
+      "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view",
+      "pdf_file": "impact_ai_digitalisation_indigenous_communities_2025.pdf",
+      "description": "Esta investigación explora cómo la inteligencia artificial y la transformación digital impactan a las comunidades indígenas, examinando tanto oportunidades de desarrollo como riesgos para la preservación cultural. El estudio proporciona recomendaciones para políticas digitales inclusivas."
     },
     {
       "title": "Forjando una Transición Justa: Hacia empleos verdes y futuros basados en derechos (pp. 169-217)",
       "year": 2023,
-      "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf"
+      "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf",
+      "pdf_file": "forging_just_transition_green_jobs_2023.pdf",
+      "description": "Un análisis integral de la transición hacia empleos verdes y economías sostenibles, centrándose en enfoques basados en derechos. Esta sección examina marcos de políticas necesarios para garantizar la sostenibilidad ambiental mientras se protegen los derechos de los trabajadores y la equidad social."
     },
     {
       "title": "Impacto de la participación política de las mujeres en el desarrollo de políticas de cuidado en América Latina",
       "year": 2023,
-      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean"
+      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean",
+      "pdf_file": "women_participation_politics_care_policies_latin_america_2023.pdf",
+      "description": "Tesis de maestría que examina la correlación entre la representación política de las mujeres y el desarrollo de políticas de cuidado progresivas en América Latina y el Caribe. La investigación analiza resultados de políticas en países con diferentes niveles de participación política femenina."
     },
     {
       "title": "Nuevas herramientas para analizar la ocupación del territorio peruano",
       "year": 2021,
-      "link": "https://repositorio.mincetur.gob.pe/handle/20.500.12827/107"
+      "link": "https://repositorio.mincetur.gob.pe/handle/20.500.12827/107",
+      "pdf_file": "nuevas_herramientas_analizar_territorio_peruano_2021.pdf",
+      "description": "Este artículo presenta herramientas analíticas innovadoras para estudiar patrones de ocupación territorial en Perú, combinando tecnología SIG con datos demográficos. La metodología proporciona conocimientos para la planificación urbana y el desarrollo de infraestructura en centros poblados."
     },
     {
       "title": "Reporte de brechas y relevancias de centros poblados rurales",
       "year": 2021,
-      "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/24744-reporte-de-brechas-y-relevancias-de-centros-poblados-rurales"
+      "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/24744-reporte-de-brechas-y-relevancias-de-centros-poblados-rurales",
+      "pdf_file": "reporte_brechas_relevancias_centros_poblados_rurales_2021.pdf",
+      "description": "Reporte gubernamental que analiza brechas y relevancia en centros poblados rurales en todo Perú. El estudio identifica necesidades de infraestructura y prioridades de desarrollo para 94,922 centros poblados, informando políticas nacionales de vivienda y desarrollo."
     }
   ],
   "awards": [
     {
-      "title": "Premio Buenas Prácticas en Gestión Pública (Mi Mantenimiento)",
-      "year": 2019
+      "title": "Becaria, 61º Programa de Estudios de Posgrado, ONU Ginebra",
+      "year": 2023
     },
     {
       "title": "Beca Hertie School",
       "year": "2021 – 2023"
     },
     {
-      "title": "Becaria, 61º Programa de Estudios de Posgrado, ONU Ginebra",
-      "year": 2023
+      "title": "Premio Buenas Prácticas en Gestión Pública (Mi Mantenimiento)",
+      "year": 2019
     }
   ]
 }

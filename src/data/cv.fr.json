@@ -78,27 +78,27 @@
         "Élaboration de stratégies d’allocation et de méthodologies multicritères pour la distribution de 101 millions USD de financement scolaire.",
         "Réduction de 50 % des délais d’intervention grâce à l’amélioration de la qualité des données et des processus de gestion des risques."
       ]
-    },
-    {
-      "role": "Analyste junior",
-      "organization": "Metis Gaia S.AC",
-      "period": "Mai 2017 – Déc 2018",
-      "location": "Lima, Pérou",
-      "description": [
-        "Réalisation d’analyses qualitatives sur des projets environnementaux et sociaux.",
-        "Planification et supervision du travail de terrain, y compris la conception de questionnaires et le nettoyage des données.",
-        "Soutien à des projets miniers par des analyses statistiques et économiques."
-      ]
     }
   ],
   "other_experience": [
+    {
+      "role": "Analyste junior",
+      "organization": "Metis Gaia S.AC",
+      "period": "Mai 2017 – Déc 2017",
+      "location": "Lima, Pérou",
+      "description": [
+        "Réalisation d'analyses qualitatives sur des projets environnementaux et sociaux.",
+        "Planification et supervision du travail de terrain, y compris la conception de questionnaires et le nettoyage des données.",
+        "Soutien à des projets miniers par des analyses statistiques et économiques."
+      ]
+    },
     {
       "role": "Consultante",
       "organization": "INDECOPI (Institut national de défense de la concurrence et de la protection de la propriété intellectuelle)",
       "period": "2020",
       "location": "Lima, Pérou",
       "description": [
-        "Analyse des défis liés à l’application des droits de propriété intellectuelle et propositions d’amélioration des processus.",
+        "Analyse des défis liés à l'application des droits de propriété intellectuelle et propositions d'amélioration des processus.",
         "Participation à une stratégie ayant réduit de 20 % les délais de traitement des dossiers."
       ]
     },
@@ -123,67 +123,88 @@
     },
     {
       "degree": "Licence en économie",
-      "institution": "Pontificia Universidad Católica del Perú",
+      "institution": "Universidad del Pacifico",
       "period": "2012 – 2016"
     }
   ],
-  "skills": [
-    "Power BI",
-    "RStudio",
-    "Python",
-    "QGIS",
-    "STATA",
-    "n8n",
-    "Politiques publiques",
-    "Gestion de projets",
-    "Visualisation de données",
-    "Conception d’enquêtes",
-    "Économétrie"
-  ],
+  "skills": {
+    "technical": [
+      { "name": "Power BI", "level": 90 },
+      { "name": "Tableau", "level": 85 },
+      { "name": "R (data.table, ggplot2)", "level": 90 },
+      { "name": "Python (Pandas, NumPy)", "level": 85 },
+      { "name": "STATA", "level": 95 },
+      { "name": "QGIS", "level": 80 },
+      { "name": "n8n", "level": 75 },
+      { "name": "Power Automate", "level": 70 },
+      { "name": "SurveyCTO", "level": 85 },
+      { "name": "Outils basés sur GPT", "level": 80 }
+    ],
+    "soft": [
+      { "name": "Analyse et Développement de Politiques", "level": 95 },
+      { "name": "Communication Interculturelle", "level": 90 },
+      { "name": "Gestion de Projet", "level": 85 },
+      { "name": "Recherche et Pensée Analytique", "level": 95 },
+      { "name": "Engagement des Parties Prenantes", "level": 90 },
+      { "name": "Gestion des Connaissances", "level": 85 },
+      { "name": "Planification Stratégique", "level": 80 },
+      { "name": "Innovation et Transformation Numérique", "level": 85 }
+    ]
+  },
   "languages": [
-    { "name": "Anglais", "level": "Professionnel complet" },
     { "name": "Espagnol", "level": "Langue maternelle" },
+    { "name": "Anglais", "level": "Professionnel complet" },
     { "name": "Français", "level": "Compétence professionnelle" }
   ],
   "publications": [
     {
-      "title": "Impact de l’intelligence artificielle et de la numérisation sur les communautés autochtones",
+      "title": "Impact de l'intelligence artificielle et de la numérisation sur les communautés autochtones",
       "year": 2025,
-      "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view"
+      "link": "https://drive.google.com/file/d/1bikWWF3TezkRUdh4j02Xw2haTAWlSDY5/view",
+      "pdf_file": "impact_ai_digitalisation_indigenous_communities_2025.pdf",
+      "description": "Cette recherche explore comment l'intelligence artificielle et la transformation numérique impactent les communautés autochtones, examinant à la fois les opportunités de développement et les risques pour la préservation culturelle. L'étude fournit des recommandations pour des politiques numériques inclusives."
     },
     {
       "title": "Forger une transition juste : vers des emplois verts et des avenirs fondés sur les droits (pp. 169-217)",
       "year": 2023,
-      "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf"
+      "link": "https://www.ungeneva.org/sites/default/files/2023-07/2023%20%20GSP%20Report.pdf",
+      "pdf_file": "forging_just_transition_green_jobs_2023.pdf",
+      "description": "Une analyse approfondie de la transition vers les emplois verts et les économies durables, mettant l'accent sur les approches fondées sur les droits. Cette section examine les cadres politiques nécessaires pour assurer la durabilité environnementale tout en protégeant les droits des travailleurs et l'équité sociale."
     },
     {
-      "title": "Impact de la participation politique des femmes sur l’élaboration des politiques de soins en Amérique latine",
+      "title": "Impact de la participation politique des femmes sur l'élaboration des politiques de soins en Amérique latine",
       "year": 2023,
-      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean"
+      "link": "https://www.researchgate.net/publication/371555501_Impact_of_women%27s_participation_in_politics_on_the_development_and_implementation_of_progressive_care_policies_in_Latin_America_and_the_Caribbean",
+      "pdf_file": "women_participation_politics_care_policies_latin_america_2023.pdf",
+      "description": "Mémoire de maîtrise examinant la corrélation entre la représentation politique des femmes et le développement de politiques de soins progressistes en Amérique latine et dans les Caraïbes. La recherche analyse les résultats politiques dans des pays ayant différents niveaux de participation politique féminine."
     },
     {
-      "title": "Nouveaux outils pour analyser l’occupation du territoire péruvien",
+      "title": "Nouveaux outils pour analyser l'occupation du territoire péruvien",
       "year": 2021,
-      "link": "https://repositorio.mincetur.gob.pe/handle/20.500.12827/107"
+      "link": "https://repositorio.mincetur.gob.pe/handle/20.500.12827/107",
+      "pdf_file": "nuevas_herramientas_analizar_territorio_peruano_2021.pdf",
+      "description": "Cet article présente des outils analytiques innovants pour étudier les schémas d'occupation territoriale au Pérou, combinant la technologie SIG avec des données démographiques. La méthodologie fournit des insights pour la planification urbaine et le développement d'infrastructures dans les centres peuplés."
     },
     {
       "title": "Rapport sur les écarts et la pertinence des centres peuplés ruraux",
       "year": 2021,
-      "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/24744-reporte-de-brechas-y-relevancias-de-centros-poblados-rurales"
+      "link": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/24744-reporte-de-brechas-y-relevancias-de-centros-poblados-rurales",
+      "pdf_file": "reporte_brechas_relevancias_centros_poblados_rurales_2021.pdf",
+      "description": "Rapport gouvernemental analysant les écarts et la pertinence des centres peuplés ruraux à travers le Pérou. L'étude identifie les besoins en infrastructures et les priorités de développement pour 94 922 centres peuplés, informant les politiques nationales de logement et de développement."
     }
   ],
   "awards": [
     {
-      "title": "Prix des Bonnes pratiques en gestion publique (« Mi Mantenimiento »)",
-      "year": 2019
+      "title": "Boursière, 61e Programme d'études supérieures, ONU Genève",
+      "year": 2023
     },
     {
       "title": "Bourse Hertie School",
       "year": "2021 – 2023"
     },
     {
-      "title": "Boursière, 61e Programme d’études supérieures, ONU Genève",
-      "year": 2023
+      "title": "Prix des Bonnes pratiques en gestion publique (« Mi Mantenimiento »)",
+      "year": 2019
     }
   ]
 }
