@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev --turbopack",
-  "build": "next build --turbopack && rm -rf docs && mv out docs && touch docs/.nojekyll",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack && rm -rf docs && mv out docs && touch docs/.nojekyll",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "flag-icons": "^7.5.0",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"

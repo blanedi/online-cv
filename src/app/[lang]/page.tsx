@@ -9,6 +9,7 @@ export function generateStaticParams() {
 import { notFound } from "next/navigation";
 import CVSection from "@/components/CVSection";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SectionNavigation from "@/components/SectionNavigation";
 import fs from "fs";
 import path from "path";
 
@@ -35,11 +36,10 @@ export default async function Page({ params }: { params: { lang: string } }) {
   const data = await getCVData(lang);
   if (!data) notFound();
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-[#101010] py-8 px-2">
-      <div className="w-full max-w-4xl">
-        <LanguageSwitcher current={lang} />
-        <CVSection data={data} />
-      </div>
+    <div className="min-h-screen">
+      <SectionNavigation lang={lang} />
+      <LanguageSwitcher current={lang} />
+      <CVSection data={data} />
     </div>
   );
 }
