@@ -290,12 +290,12 @@ export default function CVSection({ data }: { data: CVData }) {
               const getOrgLogo = (organization: string) => {
                 if (!organization) return null;
                 const lowerOrg = organization.toLowerCase();
-                if (lowerOrg.includes('icmpd')) return '/images/icmpd-logo.png';
-                if (lowerOrg.includes('ilo') || lowerOrg.includes('international labour')) return '/images/ilo-logo.png';
-                if (lowerOrg.includes('unicef')) return '/images/unicef-logo.png';
-                if (lowerOrg.includes('housing') || lowerOrg.includes('vivienda')) return '/images/ministry-housing-peru-logo.jpg';
-                if (lowerOrg.includes('economy') || lowerOrg.includes('finance') || lowerOrg.includes('economía')) return '/images/ministry-finance-peru-logo.jpg';
-                if (lowerOrg.includes('education') || lowerOrg.includes('educación')) return '/images/ministry-education-peru-logo.jpg';
+                if (lowerOrg.includes('icmpd')) return 'images/icmpd-logo.png';
+                if (lowerOrg.includes('ilo') || lowerOrg.includes('international labour')) return 'images/ilo-logo.png';
+                if (lowerOrg.includes('unicef')) return 'images/unicef-logo.png';
+                if (lowerOrg.includes('housing') || lowerOrg.includes('vivienda')) return 'images/ministry-housing-peru-logo.jpg';
+                if (lowerOrg.includes('economy') || lowerOrg.includes('finance') || lowerOrg.includes('economía')) return 'images/ministry-finance-peru-logo.jpg';
+                if (lowerOrg.includes('education') || lowerOrg.includes('educación')) return 'images/ministry-education-peru-logo.jpg';
                 return null;
               };
               
@@ -512,8 +512,8 @@ export default function CVSection({ data }: { data: CVData }) {
               // Get school logo based on institution
               const getSchoolLogo = (institution: string) => {
                 const lowerInstitution = institution.toLowerCase();
-                if (lowerInstitution.includes('hertie')) return '/images/hertie-school.png';
-                if (lowerInstitution.includes('pacifico')) return '/images/universidad-del-pacifico.png';
+                if (lowerInstitution.includes('hertie')) return 'images/hertie-school.png';
+                if (lowerInstitution.includes('pacifico')) return 'images/universidad-del-pacifico.png';
                 return null;
               };
               
@@ -621,7 +621,7 @@ export default function CVSection({ data }: { data: CVData }) {
                     {thumbnailFile && (
                       <div className="flex-shrink-0">
                         <img 
-                          src={`/images/publications/${thumbnailFile}`}
+                          src={`images/publications/${thumbnailFile}`}
                           alt={`${pub.title} preview`}
                           className="w-24 h-32 object-cover rounded shadow-md border border-gray-200 dark:border-gray-600"
                         />
@@ -682,11 +682,11 @@ export default function CVSection({ data }: { data: CVData }) {
                 const getAwardVisual = (title: string) => {
                   const lowerTitle = title.toLowerCase();
                   if (lowerTitle.includes('good practices') || lowerTitle.includes('buenas prácticas')) {
-                    return { type: 'pdf', src: '/awards/good-practices-award-2019.pdf', thumbnail: '/images/awards/good-practices-award-thumbnail.png' };
+                    return { type: 'pdf', src: 'awards/good-practices-award-2019.pdf', thumbnail: 'images/awards/good-practices-award-thumbnail.png' };
                   } else if (lowerTitle.includes('hertie')) {
                     return { type: 'logo', src: '/images/hertie-school.png', link: 'https://www.hertie-school.org/' };
                   } else if (lowerTitle.includes('geneva') || lowerTitle.includes('un')) {
-                    return { type: 'logo', src: '/images/un-geneva-logo.png', link: 'https://www.ungeneva.org/' };
+                    return { type: 'logo', src: 'images/un-geneva-logo.png', link: 'https://www.ungeneva.org/' };
                   }
                   return null;
                 };
@@ -706,7 +706,7 @@ export default function CVSection({ data }: { data: CVData }) {
                             className="hover:opacity-80 transition-opacity duration-200"
                           >
                             <img 
-                              src={visual.src}
+                              src={visual.src.startsWith('/') ? visual.src.slice(1) : visual.src}
                               alt={`${award.title} logo`}
                               className={`object-contain rounded ${
                                 visual.src.includes('un-geneva') 
@@ -723,7 +723,7 @@ export default function CVSection({ data }: { data: CVData }) {
                             className="hover:opacity-80 transition-opacity duration-200"
                           >
                             <img 
-                              src={visual.thumbnail}
+                              src={visual.thumbnail ? (visual.thumbnail.startsWith('/') ? visual.thumbnail.slice(1) : visual.thumbnail) : ''}
                               alt="Award document"
                               className="w-24 h-32 object-cover rounded shadow-md border border-gray-200 dark:border-gray-600"
                             />
