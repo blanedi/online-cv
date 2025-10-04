@@ -648,7 +648,7 @@ export default function CVSection({ data }: { data: CVData }) {
                             aria-label={`Download PDF: ${pub.title}`}
                           >
                             <img 
-                              src="/images/pdf-icon.png" 
+                              src="images/pdf-icon.png"
                               alt="PDF Download" 
                               className="w-5 h-5 hover:opacity-75 transition-opacity"
                             />
