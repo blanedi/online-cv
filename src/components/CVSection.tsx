@@ -147,7 +147,7 @@ export default function CVSection({ data }: { data: CVData }) {
       <section 
         className="w-full py-20 pt-28 bg-gray-50 dark:bg-slate-900 relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/images/hero-background.png)',
+          backgroundImage: 'url(images/hero-background.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
