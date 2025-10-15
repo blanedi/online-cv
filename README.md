@@ -1,91 +1,102 @@
 
-# Multilingual CV Website
+# Multilingual CV & Portfolio Website
 
-This is a professional, multilingual CV/portfolio website built with [Next.js](https://nextjs.org), designed for UN/NGO and international audiences. It supports English (default), Spanish, and French, and includes a downloadable PDF CV.
+This repository contains the source code for a professional, multilingual CV and portfolio website for Cintya Huaire. Built with [Next.js](https://nextjs.org), it is designed for international, UN, NGO, and academic audiences, and is fully deployable to GitHub Pages.
 
-## Features
+## 🌍 Features
 
-- Modern, accessible, and professional design
-- Multilingual: English, Spanish, French (with language switcher)
-- Downloadable PDF CV
-- Responsive and print-friendly
-- Ready for free deployment on GitHub Pages
+- **Professional, Accessible Design**: Clean, modern UI with a focus on clarity and professionalism.
+- **Multilingual**: English (default), Spanish, and French. Language switcher included.
+- **Downloadable PDF CV**: Always-available PDF download for offline/print use.
+- **Responsive & Print-Friendly**: Looks great on all devices and when printed.
+- **Static Export for GitHub Pages**: All assets and routes work out-of-the-box on GitHub Pages.
+- **SEO & Social Meta Tags**: Optimized for sharing and discoverability.
+- **Custom Favicon & Branding**: Personalized favicon and Open Graph image.
 
-## Getting Started
+## 🚀 Quick Start
 
-## Getting Started
-
-
-### Development
-
-First, install dependencies:
+### 1. Install Dependencies
 
 ```bash
 npm install
+# or
+yarn install
 ```
 
-Then, run the development server:
+### 2. Run Locally
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. View in Other Languages
 
+- English: `/en` (default)
+- Spanish: `/es`
+- French: `/fr`
 
-The default language is English. To view other languages, navigate to `/es` or `/fr` in your browser.
+### 4. Download the PDF CV
 
-### Testing
+Click the "Download CV" button in the site header, or access `/Resume.pdf` directly.
 
-Minimal smoke tests are included to ensure the site builds and renders:
+## 🧪 Testing
+
+Basic smoke tests are included to ensure the site builds and renders:
 
 ```bash
 npx jest
 ```
 
-### Build & Export
+## 🏗️ Build & Deploy to GitHub Pages
 
-To build and export the site for static hosting (required for GitHub Pages):
+1. **Build for Static Export**
+   ```bash
+   GITHUB_PAGES=true npm run build
+   npm run export
+   ```
+   The static site will be output to the `docs/` directory (ready for GitHub Pages).
 
-```bash
-GITHUB_PAGES=true npm run build
-```
+2. **Push to GitHub**
+   Commit and push your changes to your repository.
 
-The static site will be output to the `out/` directory.
+3. **Configure GitHub Pages**
+   - In your repo settings, set GitHub Pages to deploy from the `/docs` folder on the `master` or `main` branch.
+   - Your site will be available at `https://<your-username>.github.io/<repo-name>/`.
 
-### Deploy to GitHub Pages
+#### Deployment Notes
+- The `basePath` and `assetPrefix` are set automatically for GitHub Pages when `GITHUB_PAGES=true` is used.
+- The downloadable PDF is located at `/docs/Resume.pdf` after export.
+- A `.nojekyll` file is included to ensure proper asset serving.
 
-1. Commit and push your changes to your GitHub repository.
-2. In your repo settings, set GitHub Pages to deploy from the `out/` folder on the `master` or `main` branch.
-3. Your site will be available at `https://<your-username>.github.io/<repo-name>/`.
+## 🛠️ Customization
 
-#### Notes
-- The `basePath` and `assetPrefix` are automatically set for GitHub Pages when `GITHUB_PAGES=true` is used during build.
-- The downloadable PDF is located at `/public/Resume.pdf`.
+- **Content**: Edit your CV data in the appropriate files in `src/data/` or `src/components/`.
+- **Languages**: Update translations in the `locales/` directory.
+- **Images & Assets**: Place images in `public/images/` and update references as needed.
+- **Branding**: Update the favicon in `public/favicon.svg`.
+
+## 📁 Project Structure
+
+- `src/app/` – Main Next.js app directory (pages, layout, not-found, etc.)
+- `public/` – Static assets (images, PDF, favicon)
+- `docs/` – Static export output for GitHub Pages
+- `src/components/` – React components for CV sections, layout, etc.
+- `src/data/` – (If present) Structured CV data
+
+## 👩‍💻 Technology Stack
+
+- [Next.js 15+](https://nextjs.org/) (App Router, Static Export)
+- [React 19+](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/) (utility-first styling)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## 📄 License & Credits
+
+This project is for personal/professional use by Cintya Huaire. Built with open-source tools. Feel free to fork and adapt for your own CV/portfolio!
 
 ---
 
-
----
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font).
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For questions or feedback, please contact me by edithuaire@gmail.com or open an issue.
