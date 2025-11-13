@@ -1,0 +1,52 @@
+# config/config.yaml
+app:
+  name: "ICMPD Document Management System"
+  version: "1.0.0"
+  organization: "ICMPD - Modernisation Hub"
+
+processing:
+  max_file_size_mb: 100
+  supported_formats:
+    documents: [pdf, docx, txt, rtf, odt]
+    spreadsheets: [xlsx, xls, csv]
+    presentations: [pptx, ppt]
+    images: [jpg, jpeg, png, gif, bmp, tiff]
+    videos: [mp4, avi, mov, mkv, wmv]
+  
+  ocr_languages: ["eng", "fra", "deu", "ita", "ara"]
+  
+classification:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  min_confidence: 0.7
+  
+  categories:
+    training:
+      keywords: ["training", "module", "curriculum", "workshop", "capacity building"]
+      color: "#4CAF50"
+    
+    operations:
+      keywords: ["operation", "mission", "field", "mediterranean", "deployment"]
+      color: "#2196F3"
+    
+    policy:
+      keywords: ["policy", "regulation", "directive", "framework", "guideline"]
+      color: "#FF9800"
+    
+    reports:
+      keywords: ["report", "analysis", "assessment", "evaluation", "findings"]
+      color: "#9C27B0"
+    
+    data:
+      keywords: ["statistics", "data", "metrics", "indicators", "dashboard"]
+      color: "#00BCD4"
+
+storage:
+  database_url: "sqlite:///data/document_metadata.db"
+  upload_folder: "data/uploads"
+  processed_folder: "data/processed"
+  thumbnail_size: [300, 300]
+
+graph:
+  similarity_threshold: 0.75
+  max_connections: 10
+  layout: "spring"
