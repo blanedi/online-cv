@@ -256,7 +256,7 @@ export default function CVSection({ data }: { data: CVData }) {
             {/* Download Button */}
             <div className="mt-12">
               <a
-                href="/Resume.pdf"
+                href="/online-cv/Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-orange-400 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-orange-500 transition font-semibold drop-shadow-lg"
