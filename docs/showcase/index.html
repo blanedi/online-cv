@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cintya Huaire — Live Work</title>
+<meta name="description" content="Interactive tools and dashboards built by Cintya Huaire: R Shiny apps, Tableau, and Power BI dashboard structure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1424;
+    --panel:#131F35;
+    --panel-2:#1B2A47;
+    --gold:#F2B705;
+    --green:#21A179;
+    --coral:#E15554;
+    --text:#EDEFF3;
+    --text-dim:#9AA5B8;
+    --border:rgba(255,255,255,0.08);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  h1,h2,h3{font-family:'Space Grotesk', sans-serif; margin:0; letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+
+  /* Top bar */
+  .topbar{
+    padding:22px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .topbar .wrap{display:flex; justify-content:space-between; align-items:center;}
+  .backlink{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--text-dim);
+    text-decoration:none;
+    display:flex; align-items:center; gap:8px;
+    transition:color .2s ease;
+  }
+  .backlink:hover{color:var(--gold);}
+  .topbar nav{display:flex; gap:24px; font-size:14px;}
+  .topbar nav a{text-decoration:none; color:var(--text-dim); transition:color .2s ease;}
+  .topbar nav a:hover{color:var(--text);}
+
+  /* Hero */
+  .hero{padding:72px 0 48px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:18px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 0 4px rgba(242,183,5,0.15);
+  }
+  .hero h1{
+    font-size:clamp(34px, 5vw, 54px);
+    font-weight:600;
+    max-width:820px;
+    line-height:1.08;
+  }
+  .hero h1 span{color:var(--gold);}
+  .hero p.lede{
+    max-width:640px;
+    color:var(--text-dim);
+    font-size:17px;
+    margin-top:20px;
+  }
+
+  /* KPI strip, styled after her own PowerBI stat cards */
+  .kpis{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+    margin-top:44px;
+  }
+  .kpi{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-top:3px solid var(--gold);
+    border-radius:10px;
+    padding:18px 20px;
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .kpi:nth-child(2){border-top-color:var(--green);}
+  .kpi:nth-child(3){border-top-color:var(--coral);}
+  .kpi:nth-child(4){border-top-color:var(--gold);}
+  .kpi:hover{transform:translateY(-3px);}
+  .kpi .num{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:32px;
+    font-weight:700;
+  }
+  .kpi .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--text-dim);
+    margin-top:4px;
+    line-height:1.4;
+  }
+
+  /* Section headers */
+  section{padding:64px 0;}
+  section.alt{background:linear-gradient(180deg, rgba(19,31,53,0.4), transparent);}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:32px;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{font-size:28px; font-weight:600;}
+  .section-head .note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--text-dim);
+    max-width:340px;
+    text-align:right;
+  }
+
+  /* Live apps tabs */
+  .tabbar{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:22px;
+  }
+  .tabbtn{
+    background:var(--panel);
+    border:1px solid var(--border);
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:all .2s ease;
+  }
+  .tabbtn:hover{color:var(--text); border-color:rgba(255,255,255,0.2);}
+  .tabbtn.active{
+    background:var(--gold);
+    color:#1a1400;
+    border-color:var(--gold);
+    font-weight:600;
+  }
+  .frame-card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .frame-card .frame-top{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:14px 20px;
+    border-bottom:1px solid var(--border);
+  }
+  .frame-top .dot-title{display:flex; align-items:center; gap:10px;}
+  .frame-top .live-dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 0 3px rgba(33,161,121,0.18);
+  }
+  .frame-top h3{font-size:15px; font-weight:500;}
+  .frame-top a.open{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--gold);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .frame-top a.open:hover{text-decoration:underline;}
+  .frame-desc{
+    padding:14px 20px 0;
+    font-size:14px;
+    color:var(--text-dim);
+  }
+  iframe.embed{
+    width:100%;
+    height:640px;
+    border:0;
+    display:block;
+    background:#fff;
+  }
+  .frame-loading{
+    height:640px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--text-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    background:#0e1830;
+  }
+
+  /* Dashboard gallery */
+  .dash-shell{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .dash-caveat{
+    padding:14px 20px;
+    border-bottom:1px solid var(--border);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--text-dim);
+    display:flex; align-items:center; gap:10px;
+  }
+  .dash-caveat .flag{
+    color:var(--coral);
+    font-weight:600;
+  }
+  .dash-tabs{
+    display:flex;
+    border-bottom:1px solid var(--border);
+    overflow-x:auto;
+  }
+  .dash-tab{
+    padding:14px 22px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--text-dim);
+    cursor:pointer;
+    border-bottom:2px solid transparent;
+    white-space:nowrap;
+    transition:all .2s ease;
+  }
+  .dash-tab:hover{color:var(--text);}
+  .dash-tab.active{color:var(--gold); border-bottom-color:var(--gold);}
+  .dash-img-wrap{padding:20px; background:#0d1730;}
+  .dash-img-wrap img{
+    width:100%;
+    display:block;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.06);
+  }
+
+  /* Grid for structure section */
+  .desc-block{max-width:680px; color:var(--text-dim); font-size:15px; margin-bottom:28px;}
+
+  footer{
+    padding:56px 0 72px;
+    border-top:1px solid var(--border);
+    text-align:center;
+  }
+  footer .links{
+    display:flex; justify-content:center; gap:26px; flex-wrap:wrap;
+    margin-bottom:18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+  footer .links a{text-decoration:none; color:var(--text-dim); transition:color .2s ease;}
+  footer .links a:hover{color:var(--gold);}
+  footer .fine{color:#5b6478; font-size:12.5px;}
+
+  @media (max-width:760px){
+    .kpis{grid-template-columns:repeat(2, 1fr);}
+    iframe.embed, .frame-loading{height:480px;}
+    .section-head{flex-direction:column; align-items:flex-start;}
+    .section-head .note{text-align:left;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="backlink" href="../en.html">&larr; back to CV</a>
+    <nav>
+      <a href="#live">Live tools</a>
+      <a href="#dashboards">Dashboards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio — live work</div>
+    <h1>Tools I actually <span>ship</span>, not just describe.</h1>
+    <p class="lede">A working sample of the dashboards, apps, and automation I build day to day, from R Shiny tools running in production to a Power BI structure demo built with synthetic data.</p>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="num">3</div>
+        <div class="label">R Shiny apps<br>live in production</div>
+      </div>
+      <div class="kpi">
+        <div class="num">5+</div>
+        <div class="label">Power BI dashboards<br>designed &amp; shipped</div>
+      </div>
+      <div class="kpi">
+        <div class="num">18+</div>
+        <div class="label">countries covered<br>across past projects</div>
+      </div>
+      <div class="kpi">
+        <div class="num">15%</div>
+        <div class="label">reporting time cut<br>via automation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="live" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Live &amp; interactive</h2>
+      <div class="note">These run for real. Nothing here shares personal data — apps only process what a visitor uploads themselves.</div>
+    </div>
+
+    <div class="tabbar">
+      <button class="tabbtn active" data-target="app-classifier">Document Classifier</button>
+      <button class="tabbtn" data-target="app-planmap">Plan Admin Map</button>
+      <button class="tabbtn" data-target="app-mcp">MCP Algeria Planner</button>
+      <button class="tabbtn" data-target="app-tableau">Tableau — Forced Labour Supply Chain</button>
+    </div>
+
+    <div class="frame-card">
+      <div class="frame-top">
+        <div class="dot-title">
+          <span class="live-dot"></span>
+          <h3 id="live-title">Document Classifier</h3>
+        </div>
+        <a class="open" id="live-open" href="https://o9ztws-cintya0edith-huaire.shinyapps.io/document_classifier/" target="_blank" rel="noopener">Open full app &nearr;</a>
+      </div>
+      <p class="frame-desc" id="live-desc">Rule-based and LLM-assisted document classification tool, built in R Shiny.</p>
+      <div id="frame-holder">
+        <div class="frame-loading">Loading app…</div>
+      </div>
+
+      <div id="tableau-holder" style="display:none; padding:20px; background:#fff;">
+        <div class='tableauPlaceholder' id='viz1786974687903' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt=' ' src='https://public.tableau.com/static/images/Fo/ForcedLaboursupplychainCanadaILO/OverviewImportbalance/1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='ForcedLaboursupplychainCanadaILO&#47;OverviewImportbalance' />
+            <param name='tabs' value='yes' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Fo/ForcedLaboursupplychainCanadaILO/OverviewImportbalance/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dashboards">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Dashboards</h2>
+      <div class="note">Structure demo, built to show design approach without exposing institutional data.</div>
+    </div>
+
+    <p class="desc-block">This is a shell dashboard built specifically to demonstrate layout, drill-down logic, and KPI design, the same approach used in my ICMPD dashboards (MIDAM, MED TI, CAP Algeria), using entirely synthetic figures rather than real programme data.</p>
+
+    <div class="dash-shell">
+      <div class="dash-caveat"><span class="flag">&#9679; synthetic data</span> — all figures on this dashboard are mockup values, built to demonstrate structure only.</div>
+      <div class="dash-tabs">
+        <div class="dash-tab active" data-img="images/dashboard-overview.png">Overview</div>
+        <div class="dash-tab" data-img="images/dashboard-trainees.png">Trainees</div>
+        <div class="dash-tab" data-img="images/dashboard-budget.png">Budget Implemented</div>
+        <div class="dash-tab" data-img="images/dashboard-glossary.png">Glossary</div>
+      </div>
+      <div class="dash-img-wrap">
+        <img id="dash-img" src="images/dashboard-overview.png" alt="Dashboard overview page, mockup data">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="links">
+      <a href="mailto:edithuaire@gmail.com">edithuaire@gmail.com</a>
+      <a href="https://www.linkedin.com/in/cintyahuaire/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/blanedi" target="_blank" rel="noopener">GitHub</a>
+      <a href="../en.html">Full CV</a>
+    </div>
+    <div class="fine">Cintya Huaire — Digital Transformation &amp; Data for Development</div>
+  </div>
+</footer>
+
+<script>
+  const apps = {
+    "app-classifier": {
+      title: "Document Classifier",
+      desc: "Rule-based and LLM-assisted document classification tool, built in R Shiny.",
+      url: "https://o9ztws-cintya0edith-huaire.shinyapps.io/document_classifier/",
+      type: "iframe"
+    },
+    "app-planmap": {
+      title: "Plan Admin Map",
+      desc: "Interactive administrative mapping tool built in R Shiny.",
+      url: "https://o9ztws-cintya0edith-huaire.shinyapps.io/plan_admin_map/",
+      type: "iframe"
+    },
+    "app-mcp": {
+      title: "MCP Algeria Planner",
+      desc: "Planning tool for the ICMPD MED programme, built in R Shiny.",
+      url: "https://o9ztws-cintya0edith-huaire.shinyapps.io/MCP_algeria_planner/",
+      type: "iframe"
+    },
+    "app-tableau": {
+      title: "Tableau — Forced Labour Supply Chain (ILO)",
+      desc: "Supply chain risk visualisation built during my ILO research internship.",
+      url: "https://public.tableau.com/app/profile/cintya.huaire/viz/ForcedLaboursupplychainCanadaILO/OverviewImportbalance",
+      type: "tableau"
+    }
+  };
+
+  const tabs = document.querySelectorAll('.tabbtn');
+  const holder = document.getElementById('frame-holder');
+  const titleEl = document.getElementById('live-title');
+  const descEl = document.getElementById('live-desc');
+  const openEl = document.getElementById('live-open');
+
+  const tableauHolder = document.getElementById('tableau-holder');
+  let tableauInitialized = false;
+
+  function initTableau(){
+    if (tableauInitialized) return;
+    tableauInitialized = true;
+    const divElement = document.getElementById('viz1786974687903');
+    const vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    const scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  }
+
+  function loadApp(key){
+    const app = apps[key];
+    titleEl.textContent = app.title;
+    descEl.textContent = app.desc;
+    openEl.href = app.url;
+
+    if (key === 'app-tableau'){
+      holder.style.display = 'none';
+      tableauHolder.style.display = 'block';
+      initTableau();
+      return;
+    }
+
+    tableauHolder.style.display = 'none';
+    holder.style.display = 'block';
+    holder.innerHTML = '<div class="frame-loading">Loading app…</div>';
+    const iframe = document.createElement('iframe');
+    iframe.className = 'embed';
+    iframe.src = app.url;
+    iframe.loading = 'lazy';
+    iframe.title = app.title;
+    iframe.onload = () => { holder.innerHTML = ''; holder.appendChild(iframe); };
+    // fallback: replace loading text once iframe is appended and give it a moment
+    setTimeout(() => {
+      if (holder.querySelector('.frame-loading')) {
+        holder.innerHTML = '';
+        holder.appendChild(iframe);
+      }
+    }, 300);
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      loadApp(tab.dataset.target);
+    });
+  });
+
+  // initial load
+  loadApp('app-classifier');
+
+  // Dashboard gallery tabs
+  const dtabs = document.querySelectorAll('.dash-tab');
+  const dimg = document.getElementById('dash-img');
+  dtabs.forEach(t => {
+    t.addEventListener('click', () => {
+      dtabs.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      dimg.src = t.dataset.img;
+    });
+  });
+</script>
+
+</body>
+</html>
