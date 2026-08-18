@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cintya Huaire – Advocacy &amp; AI Governance</title>
+<meta name="description" content="Advocacy work by Cintya Huaire on inclusive AI governance and indigenous digital rights.">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1424; --panel:#131F35; --panel-2:#1B2A47; --gold:#F2B705; --green:#21A179; --coral:#E15554;
+    --text:#EDEFF3; --text-dim:#9AA5B8; --border:rgba(255,255,255,0.08); --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--ink); color:var(--text); font-family:'IBM Plex Sans', sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:'Space Grotesk', sans-serif; margin:0; letter-spacing:-0.01em;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+  img{max-width:100%;}
+
+  .topnav{position:sticky; top:0; z-index:100; background:rgba(11,20,36,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--border);}
+  .topnav .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 28px; gap:20px; flex-wrap:wrap;}
+  .brand{font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:17px; text-decoration:none; color:var(--text);}
+  .navlinks{display:flex; align-items:center; gap:22px; flex-wrap:wrap;}
+  .navlinks a{font-family:'IBM Plex Mono', monospace; font-size:12.5px; text-decoration:none; color:var(--text-dim); transition:color .2s ease; white-space:nowrap;}
+  .navlinks a:hover{color:var(--text);}
+  .navlinks a.active{color:var(--gold);}
+  .navlinks a.live{color:var(--gold); border:1px solid var(--gold); padding:7px 14px; border-radius:8px; font-weight:600;}
+  .navlinks a.live:hover{background:var(--gold); color:#1a1400;}
+
+  .hero{
+    position:relative; overflow:hidden;
+    padding:72px 0 48px; border-bottom:1px solid var(--border);
+    background:
+      radial-gradient(ellipse 800px 420px at 25% -10%, rgba(242,183,5,0.16), transparent 60%),
+      radial-gradient(ellipse 600px 420px at 95% 10%, rgba(33,161,121,0.12), transparent 60%),
+      var(--ink);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='4' cy='4' r='1.6' fill='%23F2B705' fill-opacity='0.4'/%3E%3C/svg%3E");
+    opacity:0.6; pointer-events:none;
+  }
+  .hero .wrap{position:relative; z-index:1;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 4px rgba(242,183,5,0.15);}
+  .hero h1{font-size:clamp(32px, 5vw, 46px); font-weight:700; text-shadow:0 0 44px rgba(242,183,5,0.28); max-width:760px;}
+  .hero p.lede{max-width:640px; color:var(--text-dim); font-size:16px; margin-top:16px;}
+
+  .kpis{display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin-top:36px;}
+  .kpi{background:var(--panel); border:1px solid var(--border); border-top:3px solid var(--gold); border-radius:10px; padding:16px 18px;}
+  .kpi:nth-child(2){border-top-color:var(--green);}
+  .kpi:nth-child(3){border-top-color:var(--coral);}
+  .kpi:nth-child(4){border-top-color:var(--gold);}
+  .kpi .num{font-family:'Space Grotesk', sans-serif; font-size:26px; font-weight:700;}
+  .kpi .label{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--text-dim); margin-top:4px; line-height:1.4;}
+
+  section{padding:56px 0;}
+  section.alt{background:linear-gradient(180deg, rgba(19,31,53,0.35), transparent);}
+  .sec-title{font-size:26px; font-weight:600; margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid var(--gold); display:inline-block;}
+  .sec-sub{color:var(--text-dim); font-size:14px; max-width:600px; margin-bottom:32px;}
+  p.body-text{color:#D7DCE6; font-size:15.5px;}
+
+  .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;}
+  .g-card{background:var(--panel); border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:transform .2s ease, border-color .2s ease;}
+  .g-card:hover{transform:translateY(-4px); border-color:rgba(242,183,5,0.35);}
+  .g-card .shot{aspect-ratio:4/3; overflow:hidden; background:#0d1730;}
+  .g-card .shot img{width:100%; height:100%; object-fit:cover; display:block;}
+  .g-card .info{padding:14px 16px;}
+  .g-card .ev{font-weight:600; font-size:14px; margin-bottom:4px;}
+  .g-card .ctx{color:var(--text-dim); font-size:12.5px; line-height:1.5;}
+
+  .narrative{max-width:760px;}
+  .narrative p{margin-bottom:18px;}
+  .pull{
+    font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:600; line-height:1.4;
+    color:var(--gold); border-left:3px solid var(--gold); padding-left:20px; margin:32px 0;
+  }
+
+  .cta-box{
+    background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+    padding:40px; text-align:center;
+  }
+  .cta-box h3{font-size:24px; margin-bottom:14px;}
+  .cta-box p{color:var(--text-dim); max-width:520px; margin:0 auto 26px;}
+  .cta-buttons{display:flex; justify-content:center; gap:14px; flex-wrap:wrap;}
+  .cta-btn{
+    font-family:'IBM Plex Mono', monospace; font-size:13.5px; font-weight:600;
+    padding:12px 24px; border-radius:8px; text-decoration:none; transition:transform .2s ease;
+  }
+  .cta-btn.primary{background:var(--gold); color:#1a1400;}
+  .cta-btn.secondary{background:var(--panel-2); color:var(--text); border:1px solid var(--border);}
+  .cta-btn:hover{transform:translateY(-2px);}
+
+  footer{padding:48px 0 64px; border-top:1px solid var(--border); text-align:center;}
+  footer .links{display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:16px; font-family:'IBM Plex Mono', monospace; font-size:13px;}
+  footer .links a{text-decoration:none; color:var(--text-dim); transition:color .2s ease;}
+  footer .links a:hover{color:var(--gold);}
+  footer .fine{color:#5b6478; font-size:12.5px;}
+
+  @media (max-width:760px){
+    .kpis{grid-template-columns:repeat(2, 1fr);}
+    .gallery{grid-template-columns:1fr 1fr;}
+    .navlinks{display:none;}
+  }
+  @media (max-width:520px){
+    .gallery{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{transition:none !important;} }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="wrap">
+    <a class="brand" href="../en.html">Cintya Huaire</a>
+    <div class="navlinks">
+      <a href="../en.html">CV</a>
+      <a href="../showcase/index.html">Live Work</a>
+      <a class="active" href="index.html">Advocacy</a>
+      <a class="live" href="mailto:edithuaire@gmail.com">Get in Touch ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Advocacy &amp; AI Governance</div>
+    <h1>Building AI that includes everyone, not just those already positioned to benefit.</h1>
+    <p class="lede">I lead the AI for Indigenous Communities Vertical at the Global Youth AI Advisory Body (GYAAB), and speak, write, and convene on inclusive AI governance and indigenous digital rights across international forums.</p>
+
+    <div class="kpis">
+      <div class="kpi"><div class="num">1</div><div class="label">advisory body vertical<br>led since 2025</div></div>
+      <div class="kpi"><div class="num">2</div><div class="label">publications on AI<br>and indigenous rights</div></div>
+      <div class="kpi"><div class="num">6+</div><div class="label">international forums<br>and summits attended</div></div>
+      <div class="kpi"><div class="num">3</div><div class="label">continents represented:<br>Europe, Americas, network-wide</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="story">
+  <div class="wrap">
+    <h2 class="sec-title">What I work on</h2>
+    <div class="narrative">
+      <p class="body-text">I lead the AI for Indigenous Communities Vertical at the Global Youth AI Advisory Body (GYAAB), where I authored a special report examining AI-driven risks and opportunities for indigenous communities globally, and contributed the chapter "Indigenous Digital Self-Determination" to AI Multipolarity: People. Peace. Planet.</p>
+
+      <p class="pull">The benefits of AI must be built to include everyone, not just those already positioned to capture them.</p>
+
+      <p class="body-text">That conviction is what takes me to rooms like the AI for Good Global Summit, the ITU Academy, and UN forums on AI governance: not as a spectator, but to make sure questions of digital inclusion and indigenous self-determination are part of how these frameworks get built, not an afterthought once they are finished.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="alt">
+  <div class="wrap">
+    <h2 class="sec-title">Where this work happens</h2>
+    <p class="sec-sub">A selection of the forums, summits, and convenings where I've represented GYAAB or contributed to AI governance and digital rights discussions.</p>
+
+    <div class="gallery">
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/ai_good_gyab.jpg" alt="Representing GYAAB at the AI for Good Global Summit"></div>
+        <div class="info"><div class="ev">AI for Good Global Summit</div><div class="ctx">Representing GYAAB. Geneva, Switzerland, July 2026.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/ai_good_2026.jpg" alt="AI for Good Global Summit, Hall 1"></div>
+        <div class="info"><div class="ev">AI for Good Global Summit</div><div class="ctx">Centre Stage &amp; Leaders Lounge. Geneva, Switzerland, July 2026.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/ai_good_2026_general.jpg" alt="Main stage session at AI for Good Global Summit"></div>
+        <div class="info"><div class="ev">AI for Good Global Summit</div><div class="ctx">Main stage session. Geneva, Switzerland, July 2026.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/global_ai_dialogue.jpg" alt="Global AI Dialogue special presentation"></div>
+        <div class="info"><div class="ev">Global AI Dialogue</div><div class="ctx">Special presentation of the Preliminary Report of the Independent Scientific Panel on AI.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/itu_certificate_sao_paulo.jpg" alt="ITU AI governance certificate ceremony, São Paulo"></div>
+        <div class="info"><div class="ev">ITU Academy — AI Governance in Practice</div><div class="ctx">In-person certificate ceremony. São Paulo, Brazil, March 2026.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/wsis_women_govstack.jpg" alt="World Summit on the Information Society, with fellow women in GovStack"></div>
+        <div class="info"><div class="ev">World Summit on the Information Society (WSIS)</div><div class="ctx">In support of fellow women in the GovStack network.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/un_gsp.jpg" alt="61st UN Graduate Study Programme, Palais des Nations"></div>
+        <div class="info"><div class="ev">61st UN Graduate Study Programme</div><div class="ctx">Palais des Nations. Geneva, Switzerland, 2023.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/un_gsp_2.jpg" alt="61st UN Graduate Study Programme, formal session"></div>
+        <div class="info"><div class="ev">61st UN Graduate Study Programme</div><div class="ctx">Formal committee session. Geneva, Switzerland, 2023.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/ahead_of_the_storm_1.jpg" alt="Ahead of the Storm hackathon, UN Open Source Week"></div>
+        <div class="info"><div class="ev">"Ahead of the Storm" Hackathon</div><div class="ctx">UN Open Source Week. UN Headquarters, New York.</div></div>
+      </div>
+
+      <div class="g-card">
+        <div class="shot"><img src="../images/advocacy/ahead_of_the_storm_2.jpg" alt="Ahead of the Storm hackathon team"></div>
+        <div class="info"><div class="ev">"Ahead of the Storm" Hackathon</div><div class="ctx">UN Open Source Week. UN Headquarters, New York.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="collaborate">
+  <div class="wrap">
+    <div class="cta-box">
+      <h3>Let's work together</h3>
+      <p>I'm open to speaking engagements, panels, and collaboration on AI governance, digital inclusion, and indigenous digital rights. If you're organising something in this space, I'd welcome the conversation.</p>
+      <div class="cta-buttons">
+        <a class="cta-btn primary" href="mailto:edithuaire@gmail.com">Get in Touch</a>
+        <a class="cta-btn secondary" href="https://www.linkedin.com/in/cintyahuaire/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="links">
+      <a href="mailto:edithuaire@gmail.com">edithuaire@gmail.com</a>
+      <a href="https://www.linkedin.com/in/cintyahuaire/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/blanedi" target="_blank" rel="noopener">GitHub</a>
+      <a href="../en.html">Full CV</a>
+    </div>
+    <div class="fine">Cintya Huaire — AI Governance &amp; Indigenous Digital Rights</div>
+  </div>
+</footer>
+
+</body>
+</html>
