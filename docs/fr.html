@@ -40,18 +40,13 @@
     position:relative; overflow:hidden;
     padding:72px 0 48px; border-bottom:1px solid var(--border);
     background:
-      radial-gradient(ellipse 800px 420px at 25% -10%, rgba(242,183,5,0.16), transparent 60%),
-      radial-gradient(ellipse 600px 420px at 95% 10%, rgba(33,161,121,0.12), transparent 60%),
-      var(--ink);
-  }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='4' cy='4' r='1.6' fill='%23F2B705' fill-opacity='0.4'/%3E%3C/svg%3E");
-    opacity:0.6; pointer-events:none;
+      linear-gradient(100deg, rgba(11,20,36,0.88) 0%, rgba(11,20,36,0.72) 45%, rgba(11,20,36,0.5) 100%),
+      url("images/hero-bg.jpg");
+    background-size:cover;
+    background-position:center;
   }
   .hero .wrap{position:relative; z-index:1;}
-  .hero h1{text-shadow:0 0 44px rgba(242,183,5,0.28);}
+  .hero h1{text-shadow:0 2px 24px rgba(0,0,0,0.5);}
   .hero .contact{margin-top:18px; display:flex; align-items:center; flex-wrap:wrap; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--text-dim);}
   .hero .contact > *{margin:0 16px 8px 0;}
   .hero .contact a{text-decoration:none; color:var(--text-dim); transition:color .2s ease;}
@@ -59,7 +54,7 @@
   .icon-links{display:flex; gap:10px; margin-left:2px;}
   .icon-btn{
     width:34px; height:34px; display:flex; align-items:center; justify-content:center;
-    border-radius:50%; background:var(--panel); border:1px solid var(--border);
+    border-radius:50%; background:rgba(19,31,53,0.7); backdrop-filter:blur(4px); border:1px solid var(--border);
     transition:transform .2s ease, border-color .2s ease, background .2s ease;
   }
   .icon-btn svg{width:16px; height:16px; fill:var(--text-dim); transition:fill .2s ease;}
@@ -82,8 +77,17 @@
   p.body-text{color:#D7DCE6; font-size:15px;}
   .role{margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid var(--border);}
   .role:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
-  .role-head{display:flex; gap:14px; align-items:flex-start;}
+  .role-head{display:flex; gap:14px; align-items:flex-start; cursor:pointer; user-select:none;}
   .role-head img{width:44px; height:44px; object-fit:contain; border-radius:8px; background:#fff; padding:4px; flex-shrink:0;}
+  .role-toggle{
+    margin-left:auto; flex-shrink:0; width:22px; height:22px; border-radius:50%;
+    border:1px solid var(--border); display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--text-dim);
+    transition:transform .25s ease, border-color .2s ease; margin-top:2px;
+  }
+  .role-head:hover .role-toggle{border-color:var(--gold); color:var(--gold);}
+  .role.collapsed .role-toggle{transform:rotate(-90deg);}
+  .role.collapsed .role-context, .role.collapsed ul{display:none;}
   .role-title{font-size:16.5px; font-weight:600;}
   .role-meta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim); margin-top:4px;}
   .role-context{font-style:italic; color:var(--text-dim); font-size:13.5px; margin:12px 0 12px; padding-left:58px;}
@@ -201,6 +205,7 @@
           <div class="role-title">JPO Modernisation, Centre International pour le Développement des Politiques Migratoires (ICMPD)</div>
           <div class="role-meta">Sept. 2024 – Présent &nbsp;|&nbsp; La Valette, Malte</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">Contribue à la coordination opérationnelle et à la mise en œuvre des activités de modernisation numérique et basées sur l'IA au sein des portefeuilles régionaux méditerranéens (MCP Algérie, BMPM, MIDAM), en coordination avec le Responsable de la Modernisation.</p>
       <ul>
@@ -220,6 +225,7 @@
           <div class="role-title">Stagiaire en Recherche et Données, Principes et Droits Fondamentaux au Travail, OIT</div>
           <div class="role-meta">Fév. 2024 – Août 2024 &nbsp;|&nbsp; Genève, Suisse</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">A contribué à trois volets de recherche et de données menés en parallèle au sein de la Branche FPRW, couvrant l'analyse géospatiale, la recherche statistique et l'évaluation des risques dans les chaînes d'approvisionnement au Mexique, au Turkménistan et au Canada.</p>
       <ul>
@@ -236,6 +242,7 @@
           <div class="role-title">Stagiaire en Politique Sociale et Données, UNICEF Amérique Latine et Caraïbes (LACRO)</div>
           <div class="role-meta">Oct. 2022 – Juil. 2023 &nbsp;|&nbsp; Panama (Télétravail)</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">A soutenu l'équipe de Politique Sociale dans la production de données probantes, la systématisation des données et la communication des connaissances dans 18 pays d'Amérique latine et des Caraïbes, avec un accent sur les systèmes de soins et les politiques inclusives du handicap.</p>
       <ul>
@@ -252,6 +259,7 @@
           <div class="role-title">Consultante en Politiques Publiques, Analyse Territoriale, Ministère du Logement, de la Construction et de l'Assainissement, Pérou</div>
           <div class="role-meta">Jan. 2021 – Juil. 2021 &nbsp;|&nbsp; Lima, Pérou</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">A contribué à un programme national d'analyse territoriale évaluant la répartition de la population, l'accès aux services et les besoins de développement rural dans les 94 922 centres peuplés du Pérou.</p>
       <ul>
@@ -267,6 +275,7 @@
           <div class="role-title">Consultante Économique et Données, Gestion des Finances Publiques, Ministère de l'Économie et des Finances, Pérou</div>
           <div class="role-meta">Fév. 2020 – Déc. 2020 &nbsp;|&nbsp; Lima, Pérou</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">Mission d'assistance technique internationale contractée via HELVETAS Swiss Intercooperation pour appuyer le ST-AFSP au sein du Ministère de l'Économie et des Finances du Pérou.</p>
       <ul>
@@ -283,6 +292,7 @@
           <div class="role-title">Consultante Économique et S&amp;E, Ministère de l'Éducation, Pérou</div>
           <div class="role-meta">Fév. 2018 – Jan. 2020 &nbsp;|&nbsp; Lima, Pérou</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">A contribué à la conception et au déploiement national de Mi Mantenimiento, un programme numérique gouvernemental gérant le financement de la maintenance des infrastructures pour plus de 54 000 écoles publiques à travers le Pérou.</p>
       <ul>
@@ -327,7 +337,7 @@
   <div class="wrap">
     <h2 class="sec-title">Formation</h2>
     <div class="edu">
-      <img src="images/hertie-school.png" alt="" style="visibility:hidden;">
+      <img src="images/mit-logo.jpg" alt="Logo MIT">
       <div>
         <div class="deg">Micromaster : Données, Économie et Conception des Politiques (DEDP)</div>
         <div class="inst">MIT — Massachusetts Institute of Technology &nbsp;|&nbsp; Sep. 2024 – Déc. 2025 &nbsp;|&nbsp; En ligne</div>
@@ -464,6 +474,15 @@
   }
   renderBars('tech-skills', techSkills);
   renderBars('soft-skills', softSkills);
+
+  // Collapse experience roles by default, except the most recent
+  var roles = document.querySelectorAll('.role');
+  roles.forEach(function(role, i){
+    if (i > 0) role.classList.add('collapsed');
+    role.querySelector('.role-head').addEventListener('click', function(){
+      role.classList.toggle('collapsed');
+    });
+  });
 
   var langEl = document.getElementById('lang-list');
   langEl.innerHTML = langs.map(function(d){

@@ -90,18 +90,13 @@
     position:relative; overflow:hidden;
     padding:72px 0 48px; border-bottom:1px solid var(--border);
     background:
-      radial-gradient(ellipse 800px 420px at 25% -10%, rgba(242,183,5,0.16), transparent 60%),
-      radial-gradient(ellipse 600px 420px at 95% 10%, rgba(33,161,121,0.12), transparent 60%),
-      var(--ink);
-  }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='4' cy='4' r='1.6' fill='%23F2B705' fill-opacity='0.4'/%3E%3C/svg%3E");
-    opacity:0.6; pointer-events:none;
+      linear-gradient(100deg, rgba(11,20,36,0.88) 0%, rgba(11,20,36,0.72) 45%, rgba(11,20,36,0.5) 100%),
+      url("images/hero-bg.jpg");
+    background-size:cover;
+    background-position:center;
   }
   .hero .wrap{position:relative; z-index:1;}
-  .hero h1{text-shadow:0 0 44px rgba(242,183,5,0.28);}
+  .hero h1{text-shadow:0 2px 24px rgba(0,0,0,0.5);}
   .hero .contact{margin-top:18px; display:flex; align-items:center; flex-wrap:wrap; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--text-dim);}
   .hero .contact > *{margin:0 16px 8px 0;}
   .hero .contact a{text-decoration:none; color:var(--text-dim); transition:color .2s ease;}
@@ -109,7 +104,7 @@
   .icon-links{display:flex; gap:10px; margin-left:2px;}
   .icon-btn{
     width:34px; height:34px; display:flex; align-items:center; justify-content:center;
-    border-radius:50%; background:var(--panel); border:1px solid var(--border);
+    border-radius:50%; background:rgba(19,31,53,0.7); backdrop-filter:blur(4px); border:1px solid var(--border);
     transition:transform .2s ease, border-color .2s ease, background .2s ease;
   }
   .icon-btn svg{width:16px; height:16px; fill:var(--text-dim); transition:fill .2s ease;}
@@ -144,8 +139,17 @@
   /* Experience entries */
   .role{margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid var(--border);}
   .role:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
-  .role-head{display:flex; gap:14px; align-items:flex-start;}
+  .role-head{display:flex; gap:14px; align-items:flex-start; cursor:pointer; user-select:none;}
   .role-head img{width:44px; height:44px; object-fit:contain; border-radius:8px; background:#fff; padding:4px; flex-shrink:0;}
+  .role-toggle{
+    margin-left:auto; flex-shrink:0; width:22px; height:22px; border-radius:50%;
+    border:1px solid var(--border); display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--text-dim);
+    transition:transform .25s ease, border-color .2s ease; margin-top:2px;
+  }
+  .role-head:hover .role-toggle{border-color:var(--gold); color:var(--gold);}
+  .role.collapsed .role-toggle{transform:rotate(-90deg);}
+  .role.collapsed .role-context, .role.collapsed ul{display:none;}
   .role-title{font-size:16.5px; font-weight:600;}
   .role-meta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim); margin-top:4px;}
   .role-context{font-style:italic; color:var(--text-dim); font-size:13.5px; margin:12px 0 12px; padding-left:58px;}
@@ -276,6 +280,7 @@
           <div class="role-title">JPO Modernisation, International Centre for Migration Policy Development</div>
           <div class="role-meta">Sept 2024 – Present &nbsp;|&nbsp; Valletta, Malta</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">Contributes to operational coordination and delivery of AI-enabled and digital modernisation activities across Mediterranean regional portfolios (MCP Algeria, BMPM, MIDAM), working in coordination with the Modernisation Officer.</p>
       <ul>
@@ -295,6 +300,7 @@
           <div class="role-title">Research and Data Intern, Fundamental Principles and Rights at Work, ILO</div>
           <div class="role-meta">Feb 2024 – Aug 2024 &nbsp;|&nbsp; Geneva, Switzerland</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">Contributed to three parallel research and data workstreams under the FPRW Branch, spanning geospatial analysis, statistical research, and supply chain risk assessment across Mexico, Turkmenistan, and Canada.</p>
       <ul>
@@ -311,6 +317,7 @@
           <div class="role-title">Social Policy and Data Intern, UNICEF Latin America and the Caribbean (LACRO)</div>
           <div class="role-meta">Oct 2022 – Jul 2023 &nbsp;|&nbsp; Panama City (Remote)</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">Supported the Social Policy team in evidence generation, data systematisation, and knowledge communication across 18 LAC countries, with a focus on care systems and disability-inclusive policy.</p>
       <ul>
@@ -327,6 +334,7 @@
           <div class="role-title">Public Policy Consultant, Territorial Analysis, Ministry of Housing, Construction and Sanitation, Peru</div>
           <div class="role-meta">Jan 2021 – Jul 2021 &nbsp;|&nbsp; Lima, Peru</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">Contributed to a national territorial analysis programme assessing population distribution, service access, and rural development needs across Peru's 94,922 populated centres.</p>
       <ul>
@@ -342,6 +350,7 @@
           <div class="role-title">Economic and Data Consultant, Public Financial Management, Ministry of Economy and Finance, Peru</div>
           <div class="role-meta">Feb 2020 – Dec 2020 &nbsp;|&nbsp; Lima, Peru</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">International technical assistance consultancy contracted through HELVETAS Swiss Intercooperation to support the ST-AFSP at Peru's Ministry of Economy and Finance.</p>
       <ul>
@@ -358,6 +367,7 @@
           <div class="role-title">Economic and M&amp;E Consultant, Ministry of Education, Peru</div>
           <div class="role-meta">Feb 2018 – Jan 2020 &nbsp;|&nbsp; Lima, Peru</div>
         </div>
+        <div class="role-toggle">&#9662;</div>
       </div>
       <p class="role-context">Contributed to the design and national scaling of Mi Mantenimiento, a government digital programme managing infrastructure maintenance funding for 54,000+ public schools across Peru.</p>
       <ul>
@@ -402,7 +412,7 @@
   <div class="wrap">
     <h2 class="sec-title">Education</h2>
     <div class="edu">
-      <img src="images/hertie-school.png" alt="Hertie School logo" style="visibility:hidden;">
+      <img src="images/mit-logo.jpg" alt="MIT logo">
       <div>
         <div class="deg">MicroMasters: Data, Economics and Design of Policy (DEDP)</div>
         <div class="inst">MIT — Massachusetts Institute of Technology &nbsp;|&nbsp; Sep 2024 – Dec 2025 &nbsp;|&nbsp; Online</div>
@@ -539,6 +549,15 @@
   }
   renderBars('tech-skills', techSkills);
   renderBars('soft-skills', softSkills);
+
+  // Collapse experience roles by default, except the most recent
+  var roles = document.querySelectorAll('.role');
+  roles.forEach(function(role, i){
+    if (i > 0) role.classList.add('collapsed');
+    role.querySelector('.role-head').addEventListener('click', function(){
+      role.classList.toggle('collapsed');
+    });
+  });
 
   var langEl = document.getElementById('lang-list');
   langEl.innerHTML = langs.map(function(d){
