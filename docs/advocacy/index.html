@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cintya Huaire – Advocacy &amp; AI Governance</title>
+<title>Cintya Huaire – Global Engagement &amp; AI Governance</title>
 <meta name="description" content="Advocacy work by Cintya Huaire on inclusive AI governance and indigenous digital rights.">
 <link rel="icon" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,11 +64,54 @@
   .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;}
   .g-card{background:var(--panel); border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:transform .2s ease, border-color .2s ease;}
   .g-card:hover{transform:translateY(-4px); border-color:rgba(242,183,5,0.35);}
-  .g-card .shot{aspect-ratio:4/3; overflow:hidden; background:#0d1730;}
-  .g-card .shot img{width:100%; height:100%; object-fit:cover; display:block;}
   .g-card .info{padding:14px 16px;}
   .g-card .ev{font-weight:600; font-size:14px; margin-bottom:4px;}
   .g-card .ctx{color:var(--text-dim); font-size:12.5px; line-height:1.5;}
+
+  .carousel{position:relative; aspect-ratio:4/3; background:#0d1730;}
+  .carousel .track{
+    display:flex; height:100%; overflow-x:auto; scroll-snap-type:x mandatory;
+    scrollbar-width:none; -ms-overflow-style:none;
+  }
+  .carousel .track::-webkit-scrollbar{display:none;}
+  .carousel .track img{
+    flex:0 0 100%; width:100%; height:100%; object-fit:cover; scroll-snap-align:start; display:block;
+  }
+  .carousel .nav-btn{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:2;
+    width:28px; height:28px; border-radius:50%; border:none;
+    background:rgba(11,20,36,0.65); color:#fff; font-family:'IBM Plex Mono', monospace; font-size:13px;
+    cursor:pointer; display:flex; align-items:center; justify-content:center;
+    opacity:0; transition:opacity .2s ease;
+  }
+  .carousel:hover .nav-btn{opacity:1;}
+  .carousel .nav-prev{left:8px;}
+  .carousel .nav-next{right:8px;}
+  .carousel .dots{
+    position:absolute; bottom:8px; left:0; right:0; z-index:2;
+    display:flex; justify-content:center; gap:5px;
+  }
+  .carousel .dot{width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,0.4); transition:background .2s ease;}
+  .carousel .dot.active{background:var(--gold);}
+  .single-shot{aspect-ratio:4/3; overflow:hidden; background:#0d1730;}
+  .single-shot img{width:100%; height:100%; object-fit:cover; display:block;}
+
+  .civic-list{max-width:720px;}
+  .civic-item{
+    display:flex; align-items:center; gap:16px; padding:14px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .civic-item:last-child{border-bottom:none;}
+  .civic-thumb{width:52px; height:52px; border-radius:8px; object-fit:cover; flex-shrink:0; background:var(--panel-2);}
+  .civic-thumb.placeholder{
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:15px; color:var(--text-dim);
+  }
+  .civic-body{flex:1;}
+  .civic-role{font-weight:600; font-size:14.5px;}
+  .civic-role a{text-decoration:none; color:inherit; border-bottom:1px dotted var(--text-dim);}
+  .civic-role a:hover{color:var(--gold); border-color:var(--gold);}
+  .civic-meta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim); margin-top:3px;}
 
   .narrative{max-width:760px;}
   .narrative p{margin-bottom:18px;}
@@ -117,7 +160,7 @@
     <div class="navlinks">
       <a href="../en.html">CV</a>
       <a href="../showcase/index.html">Live Work</a>
-      <a class="active" href="index.html">Advocacy</a>
+      <a class="active" href="index.html">Engagement</a>
       <a class="live" href="mailto:edithuaire@gmail.com">Get in Touch ↗</a>
     </div>
   </div>
@@ -125,7 +168,7 @@
 
 <div class="hero">
   <div class="wrap">
-    <div class="eyebrow">Advocacy &amp; AI Governance</div>
+    <div class="eyebrow">Global Engagement &amp; AI Governance</div>
     <h1>Building AI that includes everyone, not just those already positioned to benefit.</h1>
     <p class="lede">I lead the AI for Indigenous Communities Vertical at the Global Youth AI Advisory Body (GYAAB), and speak, write, and convene on inclusive AI governance and indigenous digital rights across international forums.</p>
 
@@ -133,7 +176,7 @@
       <div class="kpi"><div class="num">1</div><div class="label">advisory body vertical<br>led since 2025</div></div>
       <div class="kpi"><div class="num">2</div><div class="label">publications on AI<br>and indigenous rights</div></div>
       <div class="kpi"><div class="num">6+</div><div class="label">international forums<br>and summits attended</div></div>
-      <div class="kpi"><div class="num">3</div><div class="label">continents represented:<br>Europe, Americas, network-wide</div></div>
+      <div class="kpi"><div class="num">8+</div><div class="label">years of civic<br>engagement, since 2016</div></div>
     </div>
   </div>
 </div>
@@ -158,53 +201,107 @@
 
     <div class="gallery">
       <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/ai_good_gyab.jpg" alt="Representing GYAAB at the AI for Good Global Summit"></div>
+        <div class="carousel" data-carousel>
+          <div class="track">
+            <img src="../images/advocacy/ai_good_gyab.jpg" alt="Representing GYAAB at the AI for Good Global Summit">
+            <img src="../images/advocacy/ai_good_2026.jpg" alt="AI for Good Global Summit, Hall 1">
+            <img src="../images/advocacy/ai_good_2026_general.jpg" alt="Main stage session at AI for Good Global Summit">
+          </div>
+          <button class="nav-btn nav-prev" aria-label="Previous photo">&lsaquo;</button>
+          <button class="nav-btn nav-next" aria-label="Next photo">&rsaquo;</button>
+          <div class="dots"></div>
+        </div>
         <div class="info"><div class="ev">AI for Good Global Summit</div><div class="ctx">Representing GYAAB. Geneva, Switzerland, July 2026.</div></div>
       </div>
 
       <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/ai_good_2026.jpg" alt="AI for Good Global Summit, Hall 1"></div>
-        <div class="info"><div class="ev">AI for Good Global Summit</div><div class="ctx">Centre Stage &amp; Leaders Lounge. Geneva, Switzerland, July 2026.</div></div>
-      </div>
-
-      <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/ai_good_2026_general.jpg" alt="Main stage session at AI for Good Global Summit"></div>
-        <div class="info"><div class="ev">AI for Good Global Summit</div><div class="ctx">Main stage session. Geneva, Switzerland, July 2026.</div></div>
-      </div>
-
-      <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/global_ai_dialogue.jpg" alt="Global AI Dialogue special presentation"></div>
+        <div class="single-shot"><img src="../images/advocacy/global_ai_dialogue.jpg" alt="Global AI Dialogue special presentation"></div>
         <div class="info"><div class="ev">Global AI Dialogue</div><div class="ctx">Special presentation of the Preliminary Report of the Independent Scientific Panel on AI.</div></div>
       </div>
 
       <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/itu_certificate_sao_paulo.jpg" alt="ITU AI governance certificate ceremony, São Paulo"></div>
+        <div class="single-shot"><img src="../images/advocacy/itu_certificate_sao_paulo.jpg" alt="ITU AI governance certificate ceremony, São Paulo"></div>
         <div class="info"><div class="ev">ITU Academy — AI Governance in Practice</div><div class="ctx">In-person certificate ceremony. São Paulo, Brazil, March 2026.</div></div>
       </div>
 
       <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/wsis_women_govstack.jpg" alt="World Summit on the Information Society, with fellow women in GovStack"></div>
+        <div class="single-shot"><img src="../images/advocacy/wsis_women_govstack.jpg" alt="World Summit on the Information Society, with fellow women in GovStack"></div>
         <div class="info"><div class="ev">World Summit on the Information Society (WSIS)</div><div class="ctx">In support of fellow women in the GovStack network.</div></div>
       </div>
 
       <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/un_gsp.jpg" alt="61st UN Graduate Study Programme, Palais des Nations"></div>
+        <div class="carousel" data-carousel>
+          <div class="track">
+            <img src="../images/advocacy/un_gsp.jpg" alt="61st UN Graduate Study Programme, Palais des Nations">
+            <img src="../images/advocacy/un_gsp_2.jpg" alt="61st UN Graduate Study Programme, formal session">
+          </div>
+          <button class="nav-btn nav-prev" aria-label="Previous photo">&lsaquo;</button>
+          <button class="nav-btn nav-next" aria-label="Next photo">&rsaquo;</button>
+          <div class="dots"></div>
+        </div>
         <div class="info"><div class="ev">61st UN Graduate Study Programme</div><div class="ctx">Palais des Nations. Geneva, Switzerland, 2023.</div></div>
       </div>
 
       <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/un_gsp_2.jpg" alt="61st UN Graduate Study Programme, formal session"></div>
-        <div class="info"><div class="ev">61st UN Graduate Study Programme</div><div class="ctx">Formal committee session. Geneva, Switzerland, 2023.</div></div>
-      </div>
-
-      <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/ahead_of_the_storm_1.jpg" alt="Ahead of the Storm hackathon, UN Open Source Week"></div>
+        <div class="carousel" data-carousel>
+          <div class="track">
+            <img src="../images/advocacy/ahead_of_the_storm_1.jpg" alt="Ahead of the Storm hackathon, UN Open Source Week">
+            <img src="../images/advocacy/ahead_of_the_storm_2.jpg" alt="Ahead of the Storm hackathon team">
+          </div>
+          <button class="nav-btn nav-prev" aria-label="Previous photo">&lsaquo;</button>
+          <button class="nav-btn nav-next" aria-label="Next photo">&rsaquo;</button>
+          <div class="dots"></div>
+        </div>
         <div class="info"><div class="ev">"Ahead of the Storm" Hackathon</div><div class="ctx">UN Open Source Week. UN Headquarters, New York.</div></div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="g-card">
-        <div class="shot"><img src="../images/advocacy/ahead_of_the_storm_2.jpg" alt="Ahead of the Storm hackathon team"></div>
-        <div class="info"><div class="ev">"Ahead of the Storm" Hackathon</div><div class="ctx">UN Open Source Week. UN Headquarters, New York.</div></div>
+<section id="civic">
+  <div class="wrap">
+    <h2 class="sec-title">Civic engagement, since 2016</h2>
+    <p class="sec-sub">Volunteering and youth representation work that predates and runs alongside my AI governance focus.</p>
+
+    <div class="civic-list">
+      <div class="civic-item">
+        <img class="civic-thumb" src="../images/advocacy/hpair_2.jpg" alt="HPAIR conference">
+        <div class="civic-body">
+          <div class="civic-role">Selected Delegate for Peru, <a href="https://www.hpair.org/" target="_blank" rel="noopener">Harvard Project for Asian and International Relations (HPAIR)</a></div>
+          <div class="civic-meta">February 2018</div>
+        </div>
+      </div>
+
+      <div class="civic-item">
+        <div class="civic-thumb placeholder">UPY</div>
+        <div class="civic-body">
+          <div class="civic-role">Youth Member, United Peruvian Youth</div>
+          <div class="civic-meta">May 2017 – December 2018 · Participated in conferences and partnership activities</div>
+        </div>
+      </div>
+
+      <div class="civic-item">
+        <img class="civic-thumb" src="../images/advocacy/apec.jpg" alt="APEC delegation">
+        <div class="civic-body">
+          <div class="civic-role">Liaison for the Singapore Economy Delegation, <a href="https://www.apec.org/" target="_blank" rel="noopener">APEC — Asia-Pacific Economic Cooperation</a></div>
+          <div class="civic-meta">November 2016</div>
+        </div>
+      </div>
+
+      <div class="civic-item">
+        <div class="civic-thumb placeholder">LU</div>
+        <div class="civic-body">
+          <div class="civic-role">Volunteer Research Assistant, Luminario</div>
+          <div class="civic-meta">November 2016 – February 2017</div>
+        </div>
+      </div>
+
+      <div class="civic-item">
+        <div class="civic-thumb placeholder">NH</div>
+        <div class="civic-body">
+          <div class="civic-role">Youth Mentor, NewHopeU</div>
+          <div class="civic-meta">June – July 2020 · European festival of social innovation, COVID-19 response projects</div>
+        </div>
       </div>
     </div>
   </div>
@@ -234,6 +331,46 @@
     <div class="fine">Cintya Huaire — AI Governance &amp; Indigenous Digital Rights</div>
   </div>
 </footer>
+
+<script>
+  document.querySelectorAll('[data-carousel]').forEach(function(carousel){
+    const track = carousel.querySelector('.track');
+    const images = track.querySelectorAll('img');
+    const dotsWrap = carousel.querySelector('.dots');
+    const prevBtn = carousel.querySelector('.nav-prev');
+    const nextBtn = carousel.querySelector('.nav-next');
+
+    images.forEach(function(_, i){
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', function(){ scrollToSlide(i); });
+      dotsWrap.appendChild(dot);
+    });
+    const dots = dotsWrap.querySelectorAll('.dot');
+
+    function scrollToSlide(i){
+      track.scrollTo({ left: track.clientWidth * i, behavior: 'smooth' });
+    }
+
+    function updateActive(){
+      const i = Math.round(track.scrollLeft / track.clientWidth);
+      dots.forEach(function(d, di){ d.classList.toggle('active', di === i); });
+    }
+
+    track.addEventListener('scroll', function(){
+      window.requestAnimationFrame(updateActive);
+    });
+
+    prevBtn.addEventListener('click', function(){
+      const i = Math.max(0, Math.round(track.scrollLeft / track.clientWidth) - 1);
+      scrollToSlide(i);
+    });
+    nextBtn.addEventListener('click', function(){
+      const i = Math.min(images.length - 1, Math.round(track.scrollLeft / track.clientWidth) + 1);
+      scrollToSlide(i);
+    });
+  });
+</script>
 
 </body>
 </html>
