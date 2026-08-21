@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+  (function(){
+    var t = localStorage.getItem('cv-theme');
+    if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cintya Huaire — Live Work</title>
 <meta name="description" content="Interactive tools and dashboards built by Cintya Huaire: R Shiny apps, Tableau, and Power BI dashboard structure.">
@@ -14,12 +20,31 @@
     --panel:#131F35;
     --panel-2:#1B2A47;
     --gold:#F2B705;
+    --gold-soft:#ffd35c;
     --green:#21A179;
     --coral:#E15554;
     --text:#EDEFF3;
     --text-dim:#9AA5B8;
     --border:rgba(255,255,255,0.08);
     --radius:14px;
+    --hero-shadow:0 2px 24px rgba(0,0,0,0.5);
+    --section-alt:linear-gradient(180deg, rgba(19,31,53,0.4), transparent);
+    --hero-bg:linear-gradient(100deg, rgba(11,20,36,0.88) 0%, rgba(11,20,36,0.72) 45%, rgba(11,20,36,0.5) 100%), url("images/hero-bg.jpg");
+  }
+  html[data-theme="light"]{
+    --ink:#FBF7F0;
+    --panel:#FFFFFF;
+    --panel-2:#F3ECDF;
+    --gold:#B8860C;
+    --gold-soft:#E0A62E;
+    --green:#178F63;
+    --coral:#C94848;
+    --text:#1B2431;
+    --text-dim:#6B7385;
+    --border:rgba(20,30,50,0.10);
+    --hero-shadow:none;
+    --section-alt:linear-gradient(180deg, rgba(184,134,12,0.06), transparent);
+    --hero-bg:linear-gradient(100deg, rgba(251,247,240,0.90) 0%, rgba(251,247,240,0.78) 45%, rgba(251,247,240,0.55) 100%), url("../images/hero-bg-light.jpg");
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -30,6 +55,7 @@
     font-family:'IBM Plex Sans', sans-serif;
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
+    transition:background-color .3s ease, color .3s ease;
   }
   a{color:inherit;}
   h1,h2,h3{font-family:'Space Grotesk', sans-serif; margin:0; letter-spacing:-0.01em;}
@@ -41,7 +67,7 @@
     padding:22px 0;
     border-bottom:1px solid var(--border);
   }
-  .topbar .wrap{display:flex; justify-content:space-between; align-items:center;}
+  .topbar .wrap{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;}
   .backlink{
     font-family:'IBM Plex Mono', monospace;
     font-size:13px;
@@ -51,22 +77,29 @@
     transition:color .2s ease;
   }
   .backlink:hover{color:var(--gold);}
-  .topbar nav{display:flex; gap:24px; font-size:14px;}
+  .topbar nav{display:flex; align-items:center; gap:24px; font-size:14px;}
   .topbar nav a{text-decoration:none; color:var(--text-dim); transition:color .2s ease;}
   .topbar nav a:hover{color:var(--text);}
+  .theme-toggle{
+    display:flex; align-items:center; gap:6px;
+    background:var(--panel-2); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim);
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .theme-toggle:hover{border-color:var(--gold); color:var(--gold);}
+  .theme-toggle .icon{font-size:13px; line-height:1;}
 
   /* Hero */
   .hero{
     position:relative; overflow:hidden;
     padding:72px 0 48px;
-    background:
-      linear-gradient(100deg, rgba(11,20,36,0.88) 0%, rgba(11,20,36,0.72) 45%, rgba(11,20,36,0.5) 100%),
-      url("images/hero-bg.jpg");
+    background:var(--hero-bg);
     background-size:cover;
     background-position:center;
   }
   .hero .wrap{position:relative; z-index:1;}
-  .hero h1{text-shadow:0 2px 24px rgba(0,0,0,0.5);}
+  .hero h1{text-shadow:var(--hero-shadow);}
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
     font-size:12px;
@@ -131,7 +164,7 @@
 
   /* Section headers */
   section{padding:64px 0;}
-  section.alt{background:linear-gradient(180deg, rgba(19,31,53,0.4), transparent);}
+  section.alt{background:var(--section-alt);}
   .section-head{
     display:flex;
     justify-content:space-between;
@@ -313,6 +346,10 @@
       <a href="#dashboards">Dashboards</a>
       <a href="../advocacy/index.html">Engagement</a>
       <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark mode">
+        <span class="icon" id="themeIcon">&#9789;</span>
+        <span id="themeLabel">Dark</span>
+      </button>
     </nav>
   </div>
 </div>
@@ -409,6 +446,20 @@
         </div>
       </div>
     </div>
+
+    <div class="frame-card" id="figma-block" style="margin-top:20px;">
+      <div class="frame-top">
+        <div class="dot-title">
+          <span class="live-dot"></span>
+          <h3>Figma Prototype — Women in GovStack App</h3>
+        </div>
+        <a class="open" href="https://www.figma.com/proto/ZCbDgeEmKueYq39aR5D9bb/Women-in-GovStack-group-10?node-id=1-437&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener">Open full view &nearr;</a>
+      </div>
+      <p class="frame-desc">App mockup for the Women in GovStack architecture system I helped design — click through the interactive prototype below.</p>
+      <div style="padding:20px; background:#fff;">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width:100%; aspect-ratio:16/9; display:block;" src="https://embed.figma.com/proto/ZCbDgeEmKueYq39aR5D9bb/Women-in-GovStack-group-10?node-id=1-437&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -484,6 +535,33 @@
       t.classList.add('active');
       dimg.src = t.dataset.img;
     });
+  });
+
+  // Theme toggle
+  var themeBtn = document.getElementById('themeToggle');
+  var themeIcon = document.getElementById('themeIcon');
+  var themeLabel = document.getElementById('themeLabel');
+
+  function applyTheme(theme){
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeIcon.innerHTML = '&#9728;';
+      themeLabel.textContent = 'Light';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      themeIcon.innerHTML = '&#9789;';
+      themeLabel.textContent = 'Dark';
+    }
+  }
+
+  var savedTheme = localStorage.getItem('cv-theme') || 'dark';
+  applyTheme(savedTheme);
+
+  themeBtn.addEventListener('click', function(){
+    var current = localStorage.getItem('cv-theme') || 'dark';
+    var next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('cv-theme', next);
+    applyTheme(next);
   });
 </script>
 
