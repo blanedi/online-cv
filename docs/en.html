@@ -202,14 +202,27 @@
   .compact-role .me{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim);}
 
   /* Skills */
-  .skill-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
-  .skill-row{margin-bottom:14px;}
-  .skill-row .lbl{font-size:13.5px; margin-bottom:6px; color:var(--text-body);}
-  .skill-bar{background:var(--panel-2); border-radius:99px; height:6px; overflow:hidden;}
-  .skill-bar span{display:block; height:100%; background:linear-gradient(90deg, var(--gold), var(--gold-soft)); border-radius:99px;}
-  .lang-row{display:flex; align-items:center; gap:14px; margin-bottom:12px;}
+  .skill-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px 36px; row-gap:32px;}
+  .skill-group{margin-bottom:24px;}
+  .skill-group:last-child{margin-bottom:0;}
+  .skill-group-name{font-size:13.5px; font-weight:600; color:var(--text-body); margin-bottom:10px;}
+  .tier-row{margin-bottom:8px;}
+  .tier-row:last-child{margin-bottom:0;}
+  .tier-label{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-dim); margin-bottom:6px;}
+  .pill-list{display:flex; flex-wrap:wrap; gap:6px;}
+  .pill{font-size:12.5px; padding:4px 11px; border-radius:14px; border:1px solid rgba(242,183,5,0.45); color:var(--text-body); line-height:1.4;}
+  .pill.pill-advanced{background:var(--gold); color:var(--ink); border-color:var(--gold); font-weight:500;}
+  html[data-theme="light"] .pill.pill-advanced{color:#FBF7F0;}
+
+  .lang-list{display:flex; flex-direction:column; gap:12px; max-width:440px;}
+  .lang-row{display:flex; align-items:center; gap:14px;}
   .lang-row .lname{width:70px; font-size:13.5px; flex-shrink:0;}
-  .lang-row .skill-bar{flex:1;}
+  .lang-row .sub{display:flex; flex-direction:column; gap:5px;}
+  .dot-line{display:flex; align-items:center; gap:8px;}
+  .dots{display:flex; gap:5px;}
+  .dot{width:9px; height:9px; border-radius:50%; background:rgba(242,183,5,0.22);}
+  .dot.filled{background:var(--gold);}
+  .dot-note{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--text-dim);}
 
   /* Education */
   .edu{display:flex; gap:14px; align-items:flex-start; margin-bottom:22px;}
@@ -439,15 +452,115 @@
     <div class="skill-grid">
       <div>
         <h4 style="font-size:15px; margin-bottom:16px; color:var(--text-dim);">Technical</h4>
-        <div id="tech-skills"></div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Data &amp; analysis tools</div>
+          <div class="tier-row">
+            <div class="tier-label">Advanced</div>
+            <div class="pill-list">
+              <span class="pill pill-advanced">Power BI</span>
+              <span class="pill pill-advanced">R (data.table, ggplot2)</span>
+              <span class="pill pill-advanced">STATA</span>
+              <span class="pill pill-advanced">Tableau</span>
+            </div>
+          </div>
+          <div class="tier-row">
+            <div class="tier-label">Intermediate</div>
+            <div class="pill-list">
+              <span class="pill">Python (Pandas, NumPy)</span>
+              <span class="pill">QGIS</span>
+              <span class="pill">SurveyCTO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Automation &amp; AI</div>
+          <div class="tier-row">
+            <div class="tier-label">Advanced</div>
+            <div class="pill-list">
+              <span class="pill pill-advanced">n8n</span>
+              <span class="pill pill-advanced">Power Automate</span>
+              <span class="pill pill-advanced">GPT-based tools</span>
+            </div>
+          </div>
+          <div class="tier-row">
+            <div class="tier-label">Intermediate</div>
+            <div class="pill-list">
+              <span class="pill">Lovable</span>
+              <span class="pill">AI-assisted development</span>
+              <span class="pill">GitHub</span>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div>
         <h4 style="font-size:15px; margin-bottom:16px; color:var(--text-dim);">Core Competencies</h4>
-        <div id="soft-skills"></div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Strategic &amp; programme</div>
+          <div class="pill-list">
+            <span class="pill">Policy Analysis &amp; Development</span>
+            <span class="pill">Project Management</span>
+            <span class="pill">Strategic Planning</span>
+            <span class="pill">Innovation &amp; Digital Transformation</span>
+            <span class="pill">Knowledge Management</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">People &amp; communication</div>
+          <div class="pill-list">
+            <span class="pill">Cross-Cultural Communication</span>
+            <span class="pill">Stakeholder Engagement</span>
+            <span class="pill">Research &amp; Analytical Thinking</span>
+          </div>
+        </div>
       </div>
     </div>
+
     <h4 style="font-size:15px; margin:32px 0 16px; color:var(--text-dim);">Languages</h4>
-    <div id="lang-list" style="max-width:420px;"></div>
+    <div class="lang-list">
+      <div class="lang-row">
+        <div class="lname">Spanish</div>
+        <div class="dots">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+        </div>
+        <div class="dot-note">Native</div>
+      </div>
+      <div class="lang-row">
+        <div class="lname">English</div>
+        <div class="dots">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+        </div>
+        <div class="dot-note">C2</div>
+      </div>
+      <div class="lang-row">
+        <div class="lname">French</div>
+        <div class="sub">
+          <div class="dot-line">
+            <div class="dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+            <div class="dot-note">Speaking C1</div>
+          </div>
+          <div class="dot-line">
+            <div class="dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="dot-note">Writing B2</div>
+          </div>
+        </div>
+      </div>
+      <div class="lang-row">
+        <div class="lname">German</div>
+        <div class="dots">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="dot-note">A2</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -573,26 +686,6 @@
 </footer>
 
 <script>
-  var techSkills = [
-    ["Power BI", 90], ["Tableau", 85], ["R (data.table, ggplot2)", 90], ["Python (Pandas, NumPy)", 85],
-    ["STATA", 95], ["QGIS", 80], ["n8n", 75], ["Power Automate", 70], ["SurveyCTO", 85], ["GPT-based tools", 80]
-  ];
-  var softSkills = [
-    ["Policy Analysis & Development", 95], ["Cross-Cultural Communication", 90], ["Project Management", 85],
-    ["Research & Analytical Thinking", 95], ["Stakeholder Engagement", 90], ["Knowledge Management", 85],
-    ["Strategic Planning", 80], ["Innovation & Digital Transformation", 85]
-  ];
-  var langs = [["Spanish", 100], ["English", 95], ["French", 70], ["German", 30]];
-
-  function renderBars(containerId, data){
-    var el = document.getElementById(containerId);
-    el.innerHTML = data.map(function(d){
-      return '<div class="skill-row"><div class="lbl">'+d[0]+'</div><div class="skill-bar"><span style="width:'+d[1]+'%"></span></div></div>';
-    }).join('');
-  }
-  renderBars('tech-skills', techSkills);
-  renderBars('soft-skills', softSkills);
-
   // Collapse experience roles by default, except the most recent
   var roles = document.querySelectorAll('.role');
   roles.forEach(function(role, i){
@@ -601,11 +694,6 @@
       role.classList.toggle('collapsed');
     });
   });
-
-  var langEl = document.getElementById('lang-list');
-  langEl.innerHTML = langs.map(function(d){
-    return '<div class="lang-row"><div class="lname">'+d[0]+'</div><div class="skill-bar"><span style="width:'+d[1]+'%"></span></div></div>';
-  }).join('');
 
   // Theme toggle
   var themeBtn = document.getElementById('themeToggle');
