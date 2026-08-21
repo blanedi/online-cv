@@ -97,14 +97,26 @@
   .compact-role:last-child{border-bottom:none;}
   .compact-role .ti{font-weight:500; font-size:14.5px;}
   .compact-role .me{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim);}
-  .skill-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
-  .skill-row{margin-bottom:14px;}
-  .skill-row .lbl{font-size:13.5px; margin-bottom:6px; color:#D7DCE6;}
-  .skill-bar{background:var(--panel-2); border-radius:99px; height:6px; overflow:hidden;}
-  .skill-bar span{display:block; height:100%; background:linear-gradient(90deg, var(--gold), #ffd35c); border-radius:99px;}
-  .lang-row{display:flex; align-items:center; gap:14px; margin-bottom:12px;}
+  .skill-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px 36px; row-gap:32px;}
+  .skill-group{margin-bottom:24px;}
+  .skill-group:last-child{margin-bottom:0;}
+  .skill-group-name{font-size:13.5px; font-weight:600; color:#D7DCE6; margin-bottom:10px;}
+  .tier-row{margin-bottom:8px;}
+  .tier-row:last-child{margin-bottom:0;}
+  .tier-label{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-dim); margin-bottom:6px;}
+  .pill-list{display:flex; flex-wrap:wrap; gap:6px;}
+  .pill{font-size:12.5px; padding:4px 11px; border-radius:14px; border:1px solid rgba(242,183,5,0.45); color:#D7DCE6; line-height:1.4;}
+  .pill.pill-advanced{background:var(--gold); color:var(--ink); border-color:var(--gold); font-weight:500;}
+  html[data-theme="light"] .pill.pill-advanced{color:#FBF7F0;}
+  .lang-list{display:flex; flex-direction:column; gap:12px; max-width:440px;}
+  .lang-row{display:flex; align-items:center; gap:14px;}
   .lang-row .lname{width:70px; font-size:13.5px; flex-shrink:0;}
-  .lang-row .skill-bar{flex:1;}
+  .lang-row .sub{display:flex; flex-direction:column; gap:5px;}
+  .dot-line{display:flex; align-items:center; gap:8px;}
+  .dots{display:flex; gap:5px;}
+  .dot{width:9px; height:9px; border-radius:50%; background:rgba(242,183,5,0.22);}
+  .dot.filled{background:var(--gold);}
+  .dot-note{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--text-dim);}
   .edu{display:flex; gap:14px; align-items:flex-start; margin-bottom:22px;}
   .edu img{width:44px; height:44px; object-fit:contain; border-radius:8px; background:#fff; padding:4px; flex-shrink:0;}
   .edu .deg{font-weight:600; font-size:15.5px;}
@@ -180,9 +192,9 @@
     </div>
     <div class="kpis">
       <div class="kpi"><div class="num">7+</div><div class="label">ans d'expérience en innovation<br>numérique et politiques publiques</div></div>
-      <div class="kpi"><div class="num">6</div><div class="label">organisations :<br>UNICEF, OIT, ICMPD et Pérou</div></div>
-      <div class="kpi"><div class="num">18+</div><div class="label">pays couverts dans le cadre<br>de projets antérieurs</div></div>
-      <div class="kpi"><div class="num">3</div><div class="label">outils d'IA et tableaux<br>de bord en production</div></div>
+      <div class="kpi"><div class="num">3+3</div><div class="label">organismes internationaux et<br>ministères péruviens</div></div>
+      <div class="kpi"><div class="num">18+</div><div class="label">pays entre l'ALC,<br>l'Europe et la Méditerranée</div></div>
+      <div class="kpi"><div class="num">30+</div><div class="label">tableaux de bord, outils et<br>automatisations livrés</div></div>
     </div>
   </div>
 </div>
@@ -321,15 +333,115 @@
     <div class="skill-grid">
       <div>
         <h4 style="font-size:15px; margin-bottom:16px; color:var(--text-dim);">Techniques</h4>
-        <div id="tech-skills"></div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Données et analyse</div>
+          <div class="tier-row">
+            <div class="tier-label">Avancé</div>
+            <div class="pill-list">
+              <span class="pill pill-advanced">Power BI</span>
+              <span class="pill pill-advanced">R (data.table, ggplot2)</span>
+              <span class="pill pill-advanced">STATA</span>
+              <span class="pill pill-advanced">Tableau</span>
+            </div>
+          </div>
+          <div class="tier-row">
+            <div class="tier-label">Intermédiaire</div>
+            <div class="pill-list">
+              <span class="pill">Python (Pandas, NumPy)</span>
+              <span class="pill">QGIS</span>
+              <span class="pill">SurveyCTO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Automatisation et IA</div>
+          <div class="tier-row">
+            <div class="tier-label">Avancé</div>
+            <div class="pill-list">
+              <span class="pill pill-advanced">n8n</span>
+              <span class="pill pill-advanced">Power Automate</span>
+              <span class="pill pill-advanced">Outils basés sur GPT</span>
+            </div>
+          </div>
+          <div class="tier-row">
+            <div class="tier-label">Intermédiaire</div>
+            <div class="pill-list">
+              <span class="pill">Lovable</span>
+              <span class="pill">Développement assisté par IA</span>
+              <span class="pill">GitHub</span>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div>
         <h4 style="font-size:15px; margin-bottom:16px; color:var(--text-dim);">Compétences Clés</h4>
-        <div id="soft-skills"></div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Stratégie et gestion de programme</div>
+          <div class="pill-list">
+            <span class="pill pill-advanced">Analyse et Élaboration de Politiques</span>
+            <span class="pill">Gestion de Projet</span>
+            <span class="pill">Planification Stratégique</span>
+            <span class="pill pill-advanced">Innovation et Transformation Numérique</span>
+            <span class="pill">Gestion des Connaissances</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Relations humaines et communication</div>
+          <div class="pill-list">
+            <span class="pill pill-advanced">Communication Interculturelle</span>
+            <span class="pill">Engagement des Parties Prenantes</span>
+            <span class="pill pill-advanced">Recherche et Pensée Analytique</span>
+          </div>
+        </div>
       </div>
     </div>
+
     <h4 style="font-size:15px; margin:32px 0 16px; color:var(--text-dim);">Langues</h4>
-    <div id="lang-list" style="max-width:420px;"></div>
+    <div class="lang-list">
+      <div class="lang-row">
+        <div class="lname">Espagnol</div>
+        <div class="dots">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+        </div>
+        <div class="dot-note">Langue maternelle</div>
+      </div>
+      <div class="lang-row">
+        <div class="lname">Anglais</div>
+        <div class="dots">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+        </div>
+        <div class="dot-note">C2</div>
+      </div>
+      <div class="lang-row">
+        <div class="lname">Français</div>
+        <div class="sub">
+          <div class="dot-line">
+            <div class="dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+            <div class="dot-note">Oral C1</div>
+          </div>
+          <div class="dot-line">
+            <div class="dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="dot-note">Écrit B2</div>
+          </div>
+        </div>
+      </div>
+      <div class="lang-row">
+        <div class="lname">Allemand</div>
+        <div class="dots">
+          <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="dot-note">A2</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -455,26 +567,6 @@
 </footer>
 
 <script>
-  var techSkills = [
-    ["Power BI", 90], ["Tableau", 85], ["R (data.table, ggplot2)", 90], ["Python (Pandas, NumPy)", 85],
-    ["STATA", 95], ["QGIS", 80], ["n8n", 75], ["Power Automate", 70], ["SurveyCTO", 85], ["Outils basés sur GPT", 80]
-  ];
-  var softSkills = [
-    ["Analyse et Élaboration de Politiques", 95], ["Communication Interculturelle", 90], ["Gestion de Projet", 85],
-    ["Recherche et Pensée Analytique", 95], ["Engagement des Parties Prenantes", 90], ["Gestion des Connaissances", 85],
-    ["Planification Stratégique", 80], ["Innovation et Transformation Numérique", 85]
-  ];
-  var langs = [["Espagnol", 100], ["Anglais", 95], ["Français", 70], ["Allemand", 30]];
-
-  function renderBars(containerId, data){
-    var el = document.getElementById(containerId);
-    el.innerHTML = data.map(function(d){
-      return '<div class="skill-row"><div class="lbl">'+d[0]+'</div><div class="skill-bar"><span style="width:'+d[1]+'%"></span></div></div>';
-    }).join('');
-  }
-  renderBars('tech-skills', techSkills);
-  renderBars('soft-skills', softSkills);
-
   // Collapse experience roles by default, except the most recent
   var roles = document.querySelectorAll('.role');
   roles.forEach(function(role, i){
@@ -483,11 +575,6 @@
       role.classList.toggle('collapsed');
     });
   });
-
-  var langEl = document.getElementById('lang-list');
-  langEl.innerHTML = langs.map(function(d){
-    return '<div class="lang-row"><div class="lname">'+d[0]+'</div><div class="skill-bar"><span style="width:'+d[1]+'%"></span></div></div>';
-  }).join('');
 </script>
 
 </body>
