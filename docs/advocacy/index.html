@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+  (function(){
+    var t = localStorage.getItem('cv-theme');
+    if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cintya Huaire – Global Engagement &amp; AI Governance</title>
 <meta name="description" content="Advocacy work by Cintya Huaire on inclusive AI governance and indigenous digital rights.">
@@ -11,18 +17,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0B1424; --panel:#131F35; --panel-2:#1B2A47; --gold:#F2B705; --green:#21A179; --coral:#E15554;
-    --text:#EDEFF3; --text-dim:#9AA5B8; --border:rgba(255,255,255,0.08); --radius:14px;
+    --ink:#0B1424; --panel:#131F35; --panel-2:#1B2A47; --gold:#F2B705; --gold-soft:#ffd35c; --green:#21A179; --coral:#E15554;
+    --text:#EDEFF3; --text-dim:#9AA5B8; --text-body:#D7DCE6; --border:rgba(255,255,255,0.08); --radius:14px;
+    --hero-shadow:0 2px 24px rgba(0,0,0,0.5);
+    --section-alt:linear-gradient(180deg, rgba(19,31,53,0.35), transparent);
+    --hero-bg:linear-gradient(100deg, rgba(11,20,36,0.88) 0%, rgba(11,20,36,0.72) 45%, rgba(11,20,36,0.5) 100%), url("../images/hero-bg.jpg");
+    --nav-bg:rgba(11,20,36,0.92);
+  }
+  html[data-theme="light"]{
+    --ink:#FBF7F0; --panel:#FFFFFF; --panel-2:#F3ECDF; --gold:#B8860C; --gold-soft:#E0A62E; --green:#178F63; --coral:#C94848;
+    --text:#1B2431; --text-dim:#6B7385; --text-body:#3A4356; --border:rgba(20,30,50,0.10);
+    --hero-shadow:none;
+    --section-alt:linear-gradient(180deg, rgba(184,134,12,0.06), transparent);
+    --hero-bg:linear-gradient(100deg, rgba(251,247,240,0.90) 0%, rgba(251,247,240,0.78) 45%, rgba(251,247,240,0.55) 100%), url("../images/hero-bg-light.jpg");
+    --nav-bg:rgba(251,247,240,0.92);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0; background:var(--ink); color:var(--text); font-family:'IBM Plex Sans', sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  body{margin:0; background:var(--ink); color:var(--text); font-family:'IBM Plex Sans', sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; transition:background-color .3s ease, color .3s ease;}
   a{color:inherit;}
   h1,h2,h3,h4{font-family:'Space Grotesk', sans-serif; margin:0; letter-spacing:-0.01em;}
   .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
   img{max-width:100%;}
 
-  .topnav{position:sticky; top:0; z-index:100; background:rgba(11,20,36,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--border);}
+  .topnav{position:sticky; top:0; z-index:100; background:var(--nav-bg); backdrop-filter:blur(10px); border-bottom:1px solid var(--border);}
   .topnav .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 28px; gap:20px; flex-wrap:wrap;}
   .brand{font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:17px; text-decoration:none; color:var(--text);}
   .navlinks{display:flex; align-items:center; gap:22px; flex-wrap:wrap;}
@@ -31,35 +49,51 @@
   .navlinks a.active{color:var(--gold);}
   .navlinks a.live{color:var(--gold); border:1px solid var(--gold); padding:7px 14px; border-radius:8px; font-weight:600;}
   .navlinks a.live:hover{background:var(--gold); color:#1a1400;}
+  .theme-toggle{
+    display:flex; align-items:center; gap:6px;
+    background:var(--panel-2); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim);
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .theme-toggle:hover{border-color:var(--gold); color:var(--gold);}
+  .theme-toggle .icon{font-size:13px; line-height:1;}
 
   .hero{
     position:relative; overflow:hidden;
     padding:72px 0 48px; border-bottom:1px solid var(--border);
-    background:
-      linear-gradient(100deg, rgba(11,20,36,0.88) 0%, rgba(11,20,36,0.72) 45%, rgba(11,20,36,0.5) 100%),
-      url("../images/hero-bg.jpg");
+    background:var(--hero-bg);
     background-size:cover;
     background-position:center;
   }
   .hero .wrap{position:relative; z-index:1;}
   .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; display:flex; align-items:center; gap:10px;}
   .eyebrow::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 4px rgba(242,183,5,0.15);}
-  .hero h1{font-size:clamp(32px, 5vw, 46px); font-weight:700; text-shadow:0 2px 24px rgba(0,0,0,0.5); max-width:760px;}
+  .hero h1{font-size:clamp(32px, 5vw, 46px); font-weight:700; text-shadow:var(--hero-shadow); max-width:760px;}
   .hero p.lede{max-width:640px; color:var(--text-dim); font-size:16px; margin-top:16px;}
+  .hero p.lede a{color:var(--gold); text-decoration:none; border-bottom:1px dotted var(--gold);}
+  .hero p.lede a:hover{border-style:solid;}
 
-  .kpis{display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin-top:36px;}
+  .kpis{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-top:36px;}
   .kpi{background:var(--panel); border:1px solid var(--border); border-top:3px solid var(--gold); border-radius:10px; padding:16px 18px;}
   .kpi:nth-child(2){border-top-color:var(--green);}
   .kpi:nth-child(3){border-top-color:var(--coral);}
-  .kpi:nth-child(4){border-top-color:var(--gold);}
   .kpi .num{font-family:'Space Grotesk', sans-serif; font-size:26px; font-weight:700;}
   .kpi .label{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--text-dim); margin-top:4px; line-height:1.4;}
 
   section{padding:56px 0;}
-  section.alt{background:linear-gradient(180deg, rgba(19,31,53,0.35), transparent);}
+  section.alt{background:var(--section-alt);}
   .sec-title{font-size:26px; font-weight:600; margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid var(--gold); display:inline-block;}
   .sec-sub{color:var(--text-dim); font-size:14px; max-width:600px; margin-bottom:32px;}
-  p.body-text{color:#D7DCE6; font-size:15.5px;}
+  p.body-text{color:var(--text-body); font-size:15.5px;}
+
+  .story-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:44px; align-items:start;}
+  .story-photo{border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); position:sticky; top:88px;}
+  .story-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  @media (max-width:820px){
+    .story-grid{grid-template-columns:1fr;}
+    .story-photo{position:static; max-width:320px;}
+  }
 
   .gallery{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;}
   .g-card{background:var(--panel); border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:transform .2s ease, border-color .2s ease;}
@@ -112,8 +146,12 @@
   .civic-role a{text-decoration:none; color:inherit; border-bottom:1px dotted var(--text-dim);}
   .civic-role a:hover{color:var(--gold); border-color:var(--gold);}
   .civic-meta{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-dim); margin-top:3px;}
+  .civic-tag{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--gold); border:1px solid rgba(242,183,5,0.4); border-radius:5px; padding:2px 7px; margin-left:8px; white-space:nowrap;
+  }
 
-  .narrative{max-width:760px;}
+  .narrative{max-width:none;}
   .narrative p{margin-bottom:18px;}
   .pull{
     font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:600; line-height:1.4;
@@ -140,14 +178,16 @@
   footer .links a{text-decoration:none; color:var(--text-dim); transition:color .2s ease;}
   footer .links a:hover{color:var(--gold);}
   footer .fine{color:#5b6478; font-size:12.5px;}
+  html[data-theme="light"] footer .fine{color:#8B93A3;}
 
   @media (max-width:760px){
-    .kpis{grid-template-columns:repeat(2, 1fr);}
+    .kpis{grid-template-columns:repeat(3, 1fr);}
     .gallery{grid-template-columns:1fr 1fr;}
     .navlinks{display:none;}
   }
   @media (max-width:520px){
     .gallery{grid-template-columns:1fr;}
+    .kpis{grid-template-columns:1fr;}
   }
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{transition:none !important;} }
 </style>
@@ -162,6 +202,10 @@
       <a href="../showcase/index.html">Live Work</a>
       <a class="active" href="index.html">Engagement</a>
       <a class="live" href="mailto:edithuaire@gmail.com">Get in Touch ↗</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light or dark mode">
+        <span class="icon" id="themeIcon">&#9789;</span>
+        <span id="themeLabel">Dark</span>
+      </button>
     </div>
   </div>
 </div>
@@ -170,26 +214,67 @@
   <div class="wrap">
     <div class="eyebrow">Global Engagement &amp; AI Governance</div>
     <h1>Building AI that includes everyone, not just those already positioned to benefit.</h1>
-    <p class="lede">I lead the AI for Indigenous Communities Vertical at the Global Youth AI Advisory Body (GYAAB), and speak, write, and convene on inclusive AI governance and indigenous digital rights across international forums.</p>
+    <p class="lede">I lead the AI for Indigenous Communities Vertical at the <a href="https://globalyouthaiadvisorybody.org/member-profiles/" target="_blank" rel="noopener">Global Youth AI Advisory Body (GYAAB)</a>, and speak, write, and convene on inclusive AI governance and indigenous digital rights across international forums.</p>
 
     <div class="kpis">
       <div class="kpi"><div class="num">1</div><div class="label">advisory body vertical<br>led since 2025</div></div>
-      <div class="kpi"><div class="num">2</div><div class="label">publications on AI<br>and indigenous rights</div></div>
       <div class="kpi"><div class="num">6+</div><div class="label">international forums<br>and summits attended</div></div>
-      <div class="kpi"><div class="num">8+</div><div class="label">years of civic<br>engagement, since 2016</div></div>
+      <div class="kpi"><div class="num">10+</div><div class="label">years of civic<br>engagement, since 2016</div></div>
     </div>
   </div>
 </div>
 
 <section id="story">
   <div class="wrap">
-    <h2 class="sec-title">What I work on</h2>
-    <div class="narrative">
-      <p class="body-text">I lead the AI for Indigenous Communities Vertical at the Global Youth AI Advisory Body (GYAAB), where I authored a special report examining AI-driven risks and opportunities for indigenous communities globally, and contributed the chapter "Indigenous Digital Self-Determination" to AI Multipolarity: People. Peace. Planet.</p>
+    <h2 class="sec-title">Where this began</h2>
+    <div class="story-grid">
+      <div class="narrative">
+        <p class="body-text">This work goes back to university, where I started volunteering simply because I found meaning in service — in listening, and in showing up for people who needed someone to. It began at a shelter for older adults, and later grew into teaching math to children in Lima's marginal urban neighbourhoods — work that taught me as much as I hope it gave.</p>
 
-      <p class="pull">The benefits of AI must be built to include everyone, not just those already positioned to capture them.</p>
+        <p class="body-text">From there, my engagement moved to an international stage, representing Peru in different forums. That experience pushed me to understand my own history, and my parents', more deeply — including the discrimination I sometimes faced along the way. Working within government also gave me a strong sense that this work could genuinely deliver something to people, but that delivering it well meant learning: understanding different cultures and experiences well enough to bring my own voice into the room, so that others could be included too.</p>
 
-      <p class="body-text">That conviction is what takes me to rooms like the AI for Good Global Summit, the ITU Academy, and UN forums on AI governance: not as a spectator, but to make sure questions of digital inclusion and indigenous self-determination are part of how these frameworks get built, not an afterthought once they are finished.</p>
+        <p class="pull">The benefits of AI must be built to include everyone, not just those already positioned to capture them.</p>
+
+        <p class="body-text">Over time I came to see how rarely indigenous and rural communities are included — not only because of how society is structured, but because the opportunity to even be in these rooms rarely reaches someone from that background in the first place. I want to help change that, even though I don't claim to fully represent those communities: I'm of mixed heritage, and I didn't live that reality as directly as my parents did. But I carry part of it with me, and it's part of why this work matters to me.</p>
+
+        <p class="body-text">That conviction is what led me to the AI for Indigenous Communities Vertical at GYAAB, where I authored a special report on AI-driven risks and opportunities for indigenous communities, submitted to the Global AI Dialogue, and contributed the chapter "Indigenous Digital Self-Determination" to AI Multipolarity: People. Peace. Planet. It's also what takes me to rooms like the AI for Good Global Summit, the ITU Academy, and UN forums on AI governance — not as a spectator, but to make sure digital inclusion and indigenous self-determination are part of how these frameworks get built, not an afterthought once they're finished.</p>
+      </div>
+      <div class="story-photo">
+        <img src="../images/advocacy/un_gsp.jpg" alt="Cintya Huaire at the Palais des Nations, United Nations Office at Geneva">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2 class="sec-title">Publications &amp; collaborations</h2>
+    <p class="sec-sub">Writing and contributions on AI governance and indigenous digital rights.</p>
+
+    <div class="civic-list">
+      <div class="civic-item">
+        <div class="civic-thumb placeholder">GY</div>
+        <div class="civic-body">
+          <div class="civic-role">Special Report — AI-Driven Risks and Opportunities for Indigenous Communities<span class="civic-tag">Author</span></div>
+          <div class="civic-meta">Global Youth AI Advisory Body (GYAAB) · submitted to the Global AI Dialogue</div>
+        </div>
+      </div>
+
+      <div class="civic-item">
+        <div class="civic-thumb placeholder">AM</div>
+        <div class="civic-body">
+          <div class="civic-role">"Indigenous Digital Self-Determination"<span class="civic-tag">Chapter</span></div>
+          <div class="civic-meta">AI Multipolarity: People. Peace. Planet.</div>
+        </div>
+      </div>
+
+      <div class="civic-item">
+        <div class="civic-thumb placeholder">RC</div>
+        <div class="civic-body">
+          <div class="civic-role">Contribution — International Committee of the Red Cross (ICRC)<span class="civic-tag">In progress</span></div>
+          <div class="civic-meta">Forthcoming</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -369,6 +454,33 @@
       const i = Math.min(images.length - 1, Math.round(track.scrollLeft / track.clientWidth) + 1);
       scrollToSlide(i);
     });
+  });
+
+  // Theme toggle
+  var themeBtn = document.getElementById('themeToggle');
+  var themeIcon = document.getElementById('themeIcon');
+  var themeLabel = document.getElementById('themeLabel');
+
+  function applyTheme(theme){
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeIcon.innerHTML = '&#9728;';
+      themeLabel.textContent = 'Light';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      themeIcon.innerHTML = '&#9789;';
+      themeLabel.textContent = 'Dark';
+    }
+  }
+
+  var savedTheme = localStorage.getItem('cv-theme') || 'dark';
+  applyTheme(savedTheme);
+
+  themeBtn.addEventListener('click', function(){
+    var current = localStorage.getItem('cv-theme') || 'dark';
+    var next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('cv-theme', next);
+    applyTheme(next);
   });
 </script>
 
